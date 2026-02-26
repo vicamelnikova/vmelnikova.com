@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria Melnikova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafaf9;
+      color: #1c1917;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    .portrait {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 17px;
+      color: #57534e;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section h2 {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #a8a29e;
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #44403c;
+      line-height: 1.7;
+    }
+
+    .section p + p {
+      margin-top: 12px;
+    }
+
+    .section p a {
+      color: #44403c;
+      text-decoration: none;
+      border-bottom: 1px solid #d6d3d1;
+      transition: border-color 0.2s;
+    }
+
+    .section p a:hover {
+      border-color: #44403c;
+    }
+
+    .items {
+      list-style: none;
+    }
+
+    .items li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e7e5e4;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .items li:first-child {
+      border-top: 1px solid #e7e5e4;
+    }
+
+    .item-title {
+      font-size: 15px;
+      font-weight: 400;
+      color: #1c1917;
+    }
+
+    .item-detail {
+      font-size: 14px;
+      color: #a8a29e;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .podcast-guests {
+      font-size: 14px;
+      color: #78716c;
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 15px;
+      color: #1c1917;
+      text-decoration: none;
+      border-bottom: 1px solid #d6d3d1;
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+
+    .links a:hover {
+      border-color: #1c1917;
+    }
+
+    .writing-list {
+      list-style: none;
+    }
+
+    .writing-list li {
+      padding: 10px 0;
+    }
+
+    .writing-list a {
+      font-size: 15px;
+      color: #1c1917;
+      text-decoration: none;
+      border-bottom: 1px solid #e7e5e4;
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+
+    .writing-list a:hover {
+      border-color: #1c1917;
+    }
+
+    .writing-meta {
+      font-size: 13px;
+      color: #a8a29e;
+      margin-top: 4px;
+    }
+
+    .experience-list {
+      list-style: none;
+    }
+
+    .experience-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid #e7e5e4;
+    }
+
+    .experience-list li:first-child {
+      border-top: 1px solid #e7e5e4;
+    }
+
+    .exp-role {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1c1917;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: #57534e;
+      margin-top: 2px;
+    }
+
+    .exp-details {
+      font-size: 13px;
+      color: #a8a29e;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 48px 20px 80px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .portrait {
+        width: 96px;
+        height: 96px;
+      }
+
+      .links {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="portrait.jpeg?v=2" alt="Victoria Melnikova" class="portrait">
+
+    <h1>Victoria Melnikova</h1>
+    <p class="tagline">The business of developer tools. San Francisco.</p>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>Alongside <a href="https://evilmartians.com">Evil Martians</a>, I connect with devtool founders and help them succeed. We help 40 early-stage developer-facing startups each year with GTM, developer experience, backend and frontend development, and infra. People know us for our open source and Ruby on Rails work.</p>
+      <p>I run <a href="https://podcasts.apple.com/us/podcast/dev-propulsion-labs/id1714823787">Dev Propulsion Labs</a>, a podcast about the business of developer tools.</p>
+      <p>Outside of work I am a mom, a wife, an advocate for women in tech, SF lover and a Russian Ipanema girl.</p>
+    </div>
+
+    <div class="section">
+      <h2>Dev Propulsion Labs</h2>
+      <p>A podcast about building successful developer tool companies. 30+ episodes and counting.</p>
+      <p class="podcast-guests">Past guests include David Cramer (Sentry), Paul Copplestone (Supabase), David Gomes (Cursor), DHH (Rails), Harjot Gill (CodeRabbit), Sam Lambert (PlanetScale), Michael Grinich (WorkOS), Zeno Rocha (Resend), Jose Valim (Elixir), Jeff Huber (Chroma), Ivan Burazin (Daytona), Monica Sarbu (Xata), and many more.</p>
+    </div>
+
+    <div class="section">
+      <h2>Writing</h2>
+      <ul class="writing-list">
+        <li>
+          <a href="https://techcrunch.com">How to turn an open source project into a profitable business</a>
+          <p class="writing-meta">TechCrunch</p>
+        </li>
+        <li>
+          <a href="https://evilmartians.com/chronicles/a-letter-to-founders-join-the-local-first-movement">A letter to founders: join the local-first movement</a>
+          <p class="writing-meta">Martian Chronicles</p>
+        </li>
+        <li>
+          <a href="https://evilmartians.com/chronicles/hire-better-10x-faster-how-we-screen-50-engineers-weekly-with-no-hr">Hire better, 10X faster: how we screen 50 engineers weekly with no HR</a>
+          <p class="writing-meta">Martian Chronicles</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Speaking</h2>
+      <ul class="items">
+        <li>
+          <span class="item-title">NDC Porto</span>
+          <span class="item-detail">2025</span>
+        </li>
+        <li>
+          <span class="item-title">Commercializing Open Source</span>
+          <span class="item-detail">.NET Rocks!</span>
+        </li>
+        <li>
+          <span class="item-title">Commercializing Open Source</span>
+          <span class="item-detail">Jamstack Radio</span>
+        </li>
+        <li>
+          <span class="item-title">How to Make Money at Open Source</span>
+          <span class="item-detail">Ruby Rogues</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul class="experience-list">
+        <li>
+          <div class="exp-role">Head of New Business</div>
+          <div class="exp-company">Evil Martians</div>
+          <div class="exp-details">Aug 2021 &ndash; Present &middot; San Francisco, CA</div>
+        </li>
+        <li>
+          <div class="exp-role">Engineering Manager</div>
+          <div class="exp-company">Evil Martians</div>
+          <div class="exp-details">Nov 2020 &ndash; Aug 2021</div>
+        </li>
+        <li>
+          <div class="exp-role">Project Manager</div>
+          <div class="exp-company">Redis Digital Agency</div>
+          <div class="exp-details">Oct 2017 &ndash; Oct 2020 &middot; New York, NY</div>
+        </li>
+        <li>
+          <div class="exp-role">Production Associate</div>
+          <div class="exp-company">East Coast Catalyst</div>
+          <div class="exp-details">Jun 2016 &ndash; Jul 2017 &middot; Boston, MA</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul class="experience-list">
+        <li>
+          <div class="exp-role">Smith College</div>
+          <div class="exp-company">BA, Economics / Portuguese and Brazilian Studies</div>
+          <div class="exp-details">2012 &ndash; 2016</div>
+        </li>
+        <li>
+          <div class="exp-role">Brown University</div>
+          <div class="exp-company">Exchange Program with PUC-Rio</div>
+          <div class="exp-details">2014</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Connect</h2>
+      <div class="links">
+        <a href="https://x.com/vmelnikova_en">X</a>
+        <a href="https://www.linkedin.com/in/vmelnikova/">LinkedIn</a>
+        <a href="https://evilmartians.com/martians/victoria-melnikova">Evil Martians</a>
+        <a href="https://podcasts.apple.com/us/podcast/dev-propulsion-labs/id1714823787">Podcast</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
