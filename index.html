@@ -6,7 +6,7 @@
   <title>Victoria Melnikova</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,131 +14,214 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fafaf9;
-      color: #1c1917;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+    /* Dark theme (default) — all text meets WCAG AA on #111 */
+    :root {
+      --bg: #111111;
+      --text: #d4d4d8;       /* 10.2:1 */
+      --text-strong: #fafafa; /* 17.4:1 */
+      --text-muted: #a1a1aa;  /* 6.3:1 */
+      --text-faint: #8b8b94;  /* 4.7:1 */
+      --text-dim: #7a7a84;    /* 3.9:1 — decorative only */
+      --border: #2e2e33;
+      --link-underline: #4a4a52;
+      --toggle-bg: #1e1e22;
+      --toggle-active-bg: #2e2e33;
     }
 
-    .container {
-      max-width: 640px;
+    /* Light theme — all text meets WCAG AA on #fafaf9 */
+    [data-theme="light"] {
+      --bg: #fafaf9;
+      --text: #3d3935;         /* 9.5:1 */
+      --text-strong: #1c1917;  /* 15.4:1 */
+      --text-muted: #57534e;   /* 5.9:1 */
+      --text-faint: #6b6560;   /* 4.6:1 */
+      --text-dim: #8a8580;     /* 3.1:1 — decorative only */
+      --border: #e0dedc;
+      --link-underline: #b5b0ab;
+      --toggle-bg: #eeedeb;
+      --toggle-active-bg: #d6d4d1;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #fafaf9;
+        --text: #3d3935;
+        --text-strong: #1c1917;
+        --text-muted: #57534e;
+        --text-faint: #6b6560;
+        --text-dim: #8a8580;
+        --border: #e0dedc;
+        --link-underline: #b5b0ab;
+        --toggle-bg: #eeedeb;
+        --toggle-active-bg: #d6d4d1;
+      }
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 80px 24px 120px;
+      padding: 32px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-strong);
+    }
+
+    .theme-toggle {
+      display: flex;
+      gap: 2px;
+      background: var(--toggle-bg);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .theme-toggle button {
+      background: none;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-faint);
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .theme-toggle button:hover {
+      color: var(--text-strong);
+    }
+
+    .theme-toggle button.active {
+      background: var(--toggle-active-bg);
+      color: var(--text-strong);
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 24px 120px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .hero-text {
+      flex: 1;
     }
 
     .portrait {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
       object-fit: cover;
       object-position: center 15%;
-      margin-bottom: 32px;
+      flex-shrink: 0;
     }
 
     h1 {
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .role {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .role a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .role a:hover {
+      border-color: var(--text-muted);
     }
 
     .tagline {
-      font-size: 17px;
-      color: #57534e;
-      margin-bottom: 40px;
-      font-weight: 400;
+      font-size: 15px;
+      color: var(--text-faint);
     }
 
-    .section {
-      margin-bottom: 48px;
+    .social {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
     }
 
-    .section h2 {
+    .social a {
+      font-size: 14px;
+      color: var(--text-faint);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social a:hover {
+      color: var(--text-strong);
+    }
+
+    .prose p {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .prose a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .prose a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .section-label {
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: #a8a29e;
-      margin-bottom: 16px;
-    }
-
-    .section p {
-      font-size: 16px;
-      color: #44403c;
-      line-height: 1.7;
-    }
-
-    .section p + p {
-      margin-top: 12px;
-    }
-
-    .section p a {
-      color: #44403c;
-      text-decoration: none;
-      border-bottom: 1px solid #d6d3d1;
-      transition: border-color 0.2s;
-    }
-
-    .section p a:hover {
-      border-color: #44403c;
-    }
-
-    .items {
-      list-style: none;
-    }
-
-    .items li {
-      padding: 12px 0;
-      border-bottom: 1px solid #e7e5e4;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .items li:first-child {
-      border-top: 1px solid #e7e5e4;
-    }
-
-    .item-title {
-      font-size: 15px;
-      font-weight: 400;
-      color: #1c1917;
-    }
-
-    .item-detail {
-      font-size: 14px;
-      color: #a8a29e;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .podcast-guests {
-      font-size: 14px;
-      color: #78716c;
-      line-height: 1.7;
-      margin-top: 8px;
-    }
-
-    .links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      font-size: 15px;
-      color: #1c1917;
-      text-decoration: none;
-      border-bottom: 1px solid #d6d3d1;
-      padding-bottom: 1px;
-      transition: border-color 0.2s;
-    }
-
-    .links a:hover {
-      border-color: #1c1917;
+      color: var(--text-faint);
+      margin-top: 56px;
+      margin-bottom: 20px;
     }
 
     .writing-list {
@@ -147,189 +230,266 @@
 
     .writing-list li {
       padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .writing-list li:first-child {
+      border-top: 1px solid var(--border);
     }
 
     .writing-list a {
       font-size: 15px;
-      color: #1c1917;
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 1px solid #e7e5e4;
-      padding-bottom: 1px;
-      transition: border-color 0.2s;
+      transition: color 0.2s;
     }
 
     .writing-list a:hover {
-      border-color: #1c1917;
+      color: var(--text-strong);
     }
 
-    .writing-meta {
+    .writing-list .meta {
       font-size: 13px;
-      color: #a8a29e;
-      margin-top: 4px;
+      color: var(--text-faint);
+      margin-top: 2px;
     }
 
-    .experience-list {
-      list-style: none;
+    .experience-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
     }
 
-    .experience-list li {
-      padding: 14px 0;
-      border-bottom: 1px solid #e7e5e4;
+    .experience-item:first-child {
+      border-top: 1px solid var(--border);
     }
 
-    .experience-list li:first-child {
-      border-top: 1px solid #e7e5e4;
+    .exp-left {
+      display: flex;
+      flex-direction: column;
     }
 
     .exp-role {
       font-size: 15px;
-      font-weight: 500;
-      color: #1c1917;
+      color: var(--text);
     }
 
     .exp-company {
-      font-size: 14px;
-      color: #57534e;
-      margin-top: 2px;
+      font-size: 13px;
+      color: var(--text-faint);
     }
 
-    .exp-details {
+    .exp-date {
       font-size: 13px;
-      color: #a8a29e;
-      margin-top: 2px;
+      color: var(--text-dim);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     @media (max-width: 480px) {
-      .container {
-        padding: 48px 20px 80px;
-      }
-
-      h1 {
-        font-size: 24px;
+      .hero {
+        flex-direction: column-reverse;
+        gap: 24px;
       }
 
       .portrait {
-        width: 96px;
-        height: 96px;
+        width: 100px;
+        height: 100px;
       }
 
-      .links {
+      h1 {
+        font-size: 32px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 16px;
+      }
+
+      nav {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .content {
+        padding: 48px 20px 80px;
+      }
+
+      .experience-item {
+        flex-direction: column;
+        gap: 2px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="portrait.jpeg?v=2" alt="Victoria Melnikova" class="portrait">
+  <header>
+    <nav>
+      <a href="/" class="active">About</a>
+      <a href="https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
 
-    <h1>Victoria Melnikova</h1>
-    <p class="tagline">The business of developer tools. San Francisco.</p>
+  <div class="content">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Victoria Melnikova</h1>
+        <p class="role">Head of New Business at <a href="https://evilmartians.com">Evil Martians</a></p>
+        <p class="tagline">The business of developer tools</p>
+        <div class="social">
+          <a href="https://x.com/vmelnikova_en">X</a>
+          <a href="https://www.linkedin.com/in/vmelnikova/">LinkedIn</a>
+          <a href="https://github.com/vicamelnikova">GitHub</a>
+          <a href="mailto:vicamelnikova@evilmartians.com">Email</a>
+        </div>
+      </div>
+      <img src="avatar.webp" alt="Victoria Melnikova" class="portrait">
+    </div>
 
-    <div class="section">
-      <h2>About</h2>
-      <p>Alongside <a href="https://evilmartians.com">Evil Martians</a>, I connect with devtool founders and help them succeed. We help 40 early-stage developer-facing startups each year with GTM, developer experience, backend and frontend development, and infra. People know us for our open source and Ruby on Rails work.</p>
-      <p>I run <a href="https://podcasts.apple.com/us/podcast/dev-propulsion-labs/id1714823787">Dev Propulsion Labs</a>, a podcast about the business of developer tools.</p>
+    <div class="prose">
+      <p>Alongside Evil Martians, I connect with devtool founders and help them succeed. We help 40 early-stage developer-facing startups each year with GTM, developer experience, backend and frontend development, and infra. People know us for our open source and Ruby on Rails work.</p>
+
+      <p>I run <a href="https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H">Dev Propulsion Labs</a>, a podcast about the business of developer tools. I've talked to founders like David Cramer (Sentry), Paul Copplestone (Supabase), David Gomes (Cursor), DHH (Rails), Harjot Gill (CodeRabbit), Sam Lambert (PlanetScale), Michael Grinich (WorkOS), Zeno Rocha (Resend), Jose Valim (Elixir), and many others.</p>
+
+      <p>I wrote about <a href="https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/">how to turn an open source project into a profitable business</a> for TechCrunch, and regularly write on the <a href="https://evilmartians.com/chronicles">Martian Chronicles</a> blog.</p>
+
       <p>Outside of work I am a mom, a wife, an advocate for women in tech, SF lover and a Russian Ipanema girl.</p>
     </div>
 
-    <div class="section">
-      <h2>Dev Propulsion Labs</h2>
-      <p>A podcast about building successful developer tool companies. 30+ episodes and counting.</p>
-      <p class="podcast-guests">Past guests include David Cramer (Sentry), Paul Copplestone (Supabase), David Gomes (Cursor), DHH (Rails), Harjot Gill (CodeRabbit), Sam Lambert (PlanetScale), Michael Grinich (WorkOS), Zeno Rocha (Resend), Jose Valim (Elixir), Jeff Huber (Chroma), Ivan Burazin (Daytona), Monica Sarbu (Xata), and many more.</p>
+    <p class="section-label">Writing</p>
+    <ul class="writing-list">
+      <li>
+        <a href="https://evilmartians.com/chronicles/what-devtools-founders-making-100m-arr-told-in-san-francisco">What devtools founders making $100M+ ARR told me in San Francisco</a>
+        <p class="meta">Martian Chronicles &middot; 2026</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/chronicles/bolt-new-from-stackblitz-how-they-surfed-the-ai-wave-with-no-wipeouts">bolt.new from StackBlitz: how they surfed the AI wave with no wipeouts</a>
+        <p class="meta">Martian Chronicles &middot; 2025</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/chronicles/how-to-kill-conversions-on-your-developer-tool-landing-page">How to kill conversions on your developer tool's landing page</a>
+        <p class="meta">Martian Chronicles &middot; 2025</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/chronicles/how-ai-startups-use-changelogs-to-win-developer-trust">How AI startups use changelogs to win developer trust</a>
+        <p class="meta">Martian Chronicles &middot; 2025</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/chronicles/the-sdk-imperative-why-developer-tools-live-or-die-by-their-sdks">The SDK Imperative: why developer tools live or die by their SDKs</a>
+        <p class="meta">Martian Chronicles &middot; 2024</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/chronicles/a-letter-to-founders-join-the-local-first-movement">A letter to founders: join the local-first movement</a>
+        <p class="meta">Martian Chronicles &middot; 2024</p>
+      </li>
+      <li>
+        <a href="https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/">How to turn an open source project into a profitable business</a>
+        <p class="meta">TechCrunch &middot; 2023</p>
+      </li>
+    </ul>
+
+    <p class="section-label">Talks</p>
+    <ul class="writing-list">
+      <li>
+        <a href="https://youtu.be/3YRrBFeQ1aw?si=iPDxMHibGIKIrQBJ">Why Bolt.new Won and Most DevTools AI Pivots Failed</a>
+        <p class="meta">AI Engineer World's Fair &middot; San Francisco &middot; 2025</p>
+      </li>
+      <li>
+        <a href="https://youtu.be/5BnXCbVYGKg?si=nPjxm2qc_1UTBlib">Commercializing Open Source</a>
+        <p class="meta">NDC Porto &middot; 2023</p>
+      </li>
+    </ul>
+
+    <p class="section-label">Podcast Appearances</p>
+    <ul class="writing-list">
+      <li>
+        <a href="https://evilmartians.com/events/net-rocks-commercializing-open-source-with-victoria-melnikova">Commercializing Open Source</a>
+        <p class="meta">.NET Rocks! &middot; 2023</p>
+      </li>
+      <li>
+        <a href="https://www.heavybit.com/library/podcasts/jamstack-radio/ep-134-commercializing-open-source-with-victoria-melnikova-of-evil-martians">Commercializing Open Source</a>
+        <p class="meta">Jamstack Radio &middot; 2023</p>
+      </li>
+      <li>
+        <a href="https://evilmartians.com/events/how-to-make-money-at-open-source-ruby-rogues">How to Make Money at Open Source</a>
+        <p class="meta">Ruby Rogues &middot; 2023</p>
+      </li>
+    </ul>
+
+    <p class="section-label">Experience</p>
+    <div>
+      <div class="experience-item">
+        <div class="exp-left">
+          <span class="exp-role">Head of New Business</span>
+          <span class="exp-company">Evil Martians &middot; San Francisco</span>
+        </div>
+        <span class="exp-date">2020 &ndash; Present</span>
+      </div>
+      <div class="experience-item">
+        <div class="exp-left">
+          <span class="exp-role">Project Manager</span>
+          <span class="exp-company">Redis Digital Agency &middot; New York</span>
+        </div>
+        <span class="exp-date">2017 &ndash; 2020</span>
+      </div>
+      <div class="experience-item">
+        <div class="exp-left">
+          <span class="exp-role">Production Associate</span>
+          <span class="exp-company">East Coast Catalyst &middot; Boston</span>
+        </div>
+        <span class="exp-date">2016 &ndash; 2017</span>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>Writing</h2>
-      <ul class="writing-list">
-        <li>
-          <a href="https://techcrunch.com">How to turn an open source project into a profitable business</a>
-          <p class="writing-meta">TechCrunch</p>
-        </li>
-        <li>
-          <a href="https://evilmartians.com/chronicles/a-letter-to-founders-join-the-local-first-movement">A letter to founders: join the local-first movement</a>
-          <p class="writing-meta">Martian Chronicles</p>
-        </li>
-        <li>
-          <a href="https://evilmartians.com/chronicles/hire-better-10x-faster-how-we-screen-50-engineers-weekly-with-no-hr">Hire better, 10X faster: how we screen 50 engineers weekly with no HR</a>
-          <p class="writing-meta">Martian Chronicles</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Speaking</h2>
-      <ul class="items">
-        <li>
-          <span class="item-title">NDC Porto</span>
-          <span class="item-detail">2025</span>
-        </li>
-        <li>
-          <span class="item-title">Commercializing Open Source</span>
-          <span class="item-detail">.NET Rocks!</span>
-        </li>
-        <li>
-          <span class="item-title">Commercializing Open Source</span>
-          <span class="item-detail">Jamstack Radio</span>
-        </li>
-        <li>
-          <span class="item-title">How to Make Money at Open Source</span>
-          <span class="item-detail">Ruby Rogues</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <ul class="experience-list">
-        <li>
-          <div class="exp-role">Head of New Business</div>
-          <div class="exp-company">Evil Martians</div>
-          <div class="exp-details">Aug 2021 &ndash; Present &middot; San Francisco, CA</div>
-        </li>
-        <li>
-          <div class="exp-role">Engineering Manager</div>
-          <div class="exp-company">Evil Martians</div>
-          <div class="exp-details">Nov 2020 &ndash; Aug 2021</div>
-        </li>
-        <li>
-          <div class="exp-role">Project Manager</div>
-          <div class="exp-company">Redis Digital Agency</div>
-          <div class="exp-details">Oct 2017 &ndash; Oct 2020 &middot; New York, NY</div>
-        </li>
-        <li>
-          <div class="exp-role">Production Associate</div>
-          <div class="exp-company">East Coast Catalyst</div>
-          <div class="exp-details">Jun 2016 &ndash; Jul 2017 &middot; Boston, MA</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <ul class="experience-list">
-        <li>
-          <div class="exp-role">Smith College</div>
-          <div class="exp-company">BA, Economics / Portuguese and Brazilian Studies</div>
-          <div class="exp-details">2012 &ndash; 2016</div>
-        </li>
-        <li>
-          <div class="exp-role">Brown University</div>
-          <div class="exp-company">Exchange Program with PUC-Rio</div>
-          <div class="exp-details">2014</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Connect</h2>
-      <div class="links">
-        <a href="https://x.com/vmelnikova_en">X</a>
-        <a href="https://www.linkedin.com/in/vmelnikova/">LinkedIn</a>
-        <a href="https://evilmartians.com/martians/victoria-melnikova">Evil Martians</a>
-        <a href="https://podcasts.apple.com/us/podcast/dev-propulsion-labs/id1714823787">Podcast</a>
+    <p class="section-label">Education</p>
+    <div>
+      <div class="experience-item">
+        <div class="exp-left">
+          <span class="exp-role">Smith College</span>
+          <span class="exp-company">BA, Economics / Portuguese &amp; Brazilian Studies</span>
+        </div>
+        <span class="exp-date">2012 &ndash; 2016</span>
+      </div>
+      <div class="experience-item">
+        <div class="exp-left">
+          <span class="exp-role">Brown University</span>
+          <span class="exp-company">Exchange Program with PUC-Rio</span>
+        </div>
+        <span class="exp-date">2014</span>
       </div>
     </div>
   </div>
+
+  <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
+      if (theme === 'light') {
+        root.setAttribute('data-theme', 'light');
+      } else if (theme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+      } else {
+        root.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
 </body>
 </html>
