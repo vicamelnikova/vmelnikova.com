@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Harjot Gill taught me about going viral in Japan and building guardrails for AI code. Victoria Melnikova</title>
+  <meta name="description" content="CodeRabbit CEO Harjot Gill on why AI code review is the next Datadog, how going viral in Japan validated the product, and why the old startup playbooks no longer apply.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/harjot-gill-coderabbit.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Harjot Gill taught me about going viral in Japan and building guardrails for AI code">
+  <meta property="og:description" content="CodeRabbit CEO Harjot Gill on why AI code review is the next Datadog, how going viral in Japan validated the product, and why the old startup playbooks no longer apply.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/harjot-gill-coderabbit.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/B7CRwockaa8/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2026-02-24">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Harjot Gill taught me about going viral in Japan and building guardrails for AI code">
+  <meta name="twitter:description" content="CodeRabbit CEO Harjot Gill on why AI code review is the next Datadog, how going viral in Japan validated the product, and why the old startup playbooks no longer apply.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Harjot Gill taught me about going viral in Japan and building guardrails for AI code",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2026-02-24",
+    "description": "CodeRabbit CEO Harjot Gill on why AI code review is the next Datadog, how going viral in Japan validated the product, and why the old startup playbooks no longer apply.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/harjot-gill-coderabbit.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; February 2026</p>
+    <h1>What Harjot Gill taught me about going viral in Japan and building guardrails for AI code</h1>
+    <p class="article-intro">I'm Victoria Melnikova, and I visited CodeRabbit's SF office to talk with their CEO about something I've been thinking about a lot: as AI writes more and more code, who's checking that code? Turns out, that's a billion-dollar question.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/B7CRwockaa8" title="Harjot Gill on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/B7CRwockaa8">YouTube</a>
+        <a href="https://open.spotify.com/episode/3YYST3PYeEUWJNgAxTR1dV">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/harjot-gill-of-coderabbit-on-ai-growth-going-viral/id1714823787?i=1000751083775">Apple Podcasts</a>
+        <a href="https://evilmartians.com/events/harjot-gill-of-coderabbit-plg-and-enterprise">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>Code generation is everywhere, but who reviews the AI's work?</h2>
+      <p>On Dev Propulsion Labs, Victoria Melnikova talks to founders a lot about how engineers are conservative buyers. They don't like letting go of control. And code review is one of those things where control really matters. So when Harjot told me CodeRabbit's thesis, it clicked immediately: as the volume of AI-generated code explodes, code review becomes the bottleneck. Not code generation. Review.</p>
+      <blockquote><p>"The bottlenecks are going to shift towards understanding the code changes that the AI is making for you. Code reviews will become a bottleneck, and that's what CodeRabbit does the best."</p></blockquote>
+      <p>His analogy is Datadog. Just like Amazon had CloudWatch and GCP had Stackdriver, but Datadog became the standalone monitoring category. CodeRabbit is betting that AI code review will be a standalone category too. Even if Cursor and Claude Code get better at generation, the guardrails have to be centralized. Organizations need a consistent quality gate. That logic is hard to argue with.</p>
+
+      <h2>Going viral in Japan, and that's how they knew</h2>
+      <p>This is one of my favorite go-to-market stories. CodeRabbit didn't do design partners. They didn't do webinars. They didn't follow any of the traditional B2B SaaS playbooks. Instead, the product went viral in Japan. Of all places.</p>
+      <p>If you go to zen.dev, there are 50+ articles written by end users about CodeRabbit. None of it was orchestrated. Harjot says that organic pull, people discovering and writing about the product without being asked, gave them the confidence to build a real company around it.</p>
+      <blockquote><p>"What we saw was a lot of people pulling the product versus us having to push. We didn't have any design partners, but just the pull in the market was so strong."</p></blockquote>
+      <p>Victoria Melnikova has seen this pattern before. Some of the most successful devtools she's encountered had early traction in unexpected markets like Japan, Eastern Europe, and Brazil. When developers in a market you didn't target start writing blog posts about your product, that's the strongest signal you can get.</p>
+
+      <h2>Free for open source, but not for the reasons you'd think</h2>
+      <p>CodeRabbit is free for open source projects, and Harjot was refreshingly honest about why. Yes, it's giving back. He personally sponsors smaller projects they depend on, like AST Grep, back when it had less than 2,000 stars. But the real value is twofold.</p>
+      <p>First, discovery. Developers at enterprises find CodeRabbit through the open source projects they contribute to. TRPC, OpenShift, Linux Foundation projects, NVIDIA. They all use CodeRabbit. It's advertising that actually provides value to the community. Way better than Google ads.</p>
+      <p>Second, and this is the clever part, the feedback loop. Because open source data is public, CodeRabbit can train, fine-tune, and adjust their harness on real-world code reviews. When launching new models, they roll them out to open source first, get constant feedback, then push to paid users. The open source community is essentially their R&D playground.</p>
+
+      <h2>The old startup playbooks are dead</h2>
+      <p>Here's the thing that really resonated with me. Harjot said the strategies that worked in his previous two startups, like booths at AWS events, enterprise expos, and traditional content marketing, haven't yielded much success for CodeRabbit. They spent hundreds of thousands on it. Instead, what works is influencer marketing, YouTube collaborations with creators like Fireship, consumer-style GTM, and even station takeovers in Penn Station.</p>
+      <p>Victoria Melnikova has been seeing this across the devtools startups she works with at Evil Martians. The go-to-market motion for developer tools has fundamentally changed. The way people discover products is different. The way they buy is different. If you're still running a 2020 playbook, you're falling behind.</p>
+      <p>Harjot also made a point that stuck with me: the old debate about "wrapper vs. real product" is settled. Value accrues up the stack. The lower-level layers get commoditized. The application layer, the agentic harness, the UX, the human-AI interface, that's where the real value is. CodeRabbit made a deliberate decision to be a pure applied AI company, not to train their own models. In hindsight, that was exactly right.</p>
+
+      <h2>Revenue doubling every few months, and still not enough people</h2>
+      <p>The numbers are wild. CodeRabbit went from bootstrapped to $1M ARR with no seed round, then a $16M Series A, then a $60M Series B less than a year later. They're now more than double their B-stage revenue and halfway to their C. Revenue is doubling every few months.</p>
+      <p>And yet, they're still hiring to keep up with demand. They're at about 150 employees. Deals fall through the cracks because there aren't enough people to handle the inbound. People tweet about bad support. It's the best kind of problem to have, but it's still a problem.</p>
+      <p>Harjot described CodeRabbit like an F1 car. You're going to crash from time to time, but you have to think like a racing driver, not someone on a steady street. The hiring bar is curiosity and work ethic over domain experience, because in a space moving this fast, past experience doesn't always translate.</p>
+
+      <h2>If you're thinking about starting a company, now is the time</h2>
+      <p>Harjot's advice to founders was clear and urgent: now is the best time to start a company. This is his third startup, and he's never seen anything like the current moment. Even low-hanging ideas are becoming massive in terms of revenue growth. But the bar will get higher. The window won't stay open forever.</p>
+      <p>His specific recommendation: go after B2B enterprise workflows. Complex surface areas where you can bring AI into legal, healthcare, or specific development workflows. Those moats will last longer than consumer-side products, where ChatGPT vacuums up ideas quickly. Code review was one of those enterprise workflows. CodeRabbit understood it deeply from Harjot's previous experience in infrastructure, and they were able to bring that taste and knowledge into the AI era before anyone else.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

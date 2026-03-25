@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Michael Grinich taught me about building invisible infrastructure | Victoria Melnikova</title>
+  <meta name="description" content="Michael Grinich, founder of WorkOS, on why the best product disappears, how AI companies need enterprise readiness from day one, and why talking to users is the only algorithm that works.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/michael-grinich-workos.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Michael Grinich taught me about building invisible infrastructure">
+  <meta property="og:description" content="Michael Grinich, founder of WorkOS, on why the best product disappears, how AI companies need enterprise readiness from day one, and why talking to users is the only algorithm that works.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/michael-grinich-workos.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/yiGutRWdiAg/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2025-11-13">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Michael Grinich taught me about building invisible infrastructure">
+  <meta name="twitter:description" content="Michael Grinich, founder of WorkOS, on why the best product disappears, how AI companies need enterprise readiness from day one, and why talking to users is the only algorithm that works.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Michael Grinich taught me about building invisible infrastructure",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2025-11-13",
+    "description": "Michael Grinich, founder of WorkOS, on why the best product disappears, how AI companies need enterprise readiness from day one, and why talking to users is the only algorithm that works.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/michael-grinich-workos.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; November 2025</p>
+    <h1>What Michael Grinich taught me about building invisible infrastructure</h1>
+    <p class="article-intro">Michael Grinich built WorkOS into the plumbing behind OpenAI, Cursor, Anthropic, and Vercel. Victoria Melnikova sat down with him on Dev Propulsion Labs to understand why the best product is one nobody notices, why he fired his entire marketing team, and why AI companies need enterprise readiness faster than any generation of startups before them.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/yiGutRWdiAg" title="Michael Grinich on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/yiGutRWdiAg">YouTube</a>
+        <a href="https://evilmartians.com/events/michael-grinich-founder-of-workos-the-plumbing-behind-openai-and-cursor">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>The perfect storm nobody planned for</h2>
+      <p>WorkOS is not a new company. Michael started building it almost seven years ago. And yet, in 2025, he found himself at the center of every major AI business. I asked him straight up: why? His answer clicked into place like puzzle pieces.</p>
+      <p>First, AI companies are all B2B software companies. They sell a different product, but they are providing business software to other companies. Second, they grow upmarket insanely fast. Slack and Dropbox waited five to seven years before going after enterprise. AI companies do it within six to twelve months. And third, AI products touch so much sensitive data that security scrutiny is off the charts. You can tell someone not to put secrets in Figma. But an AI product only works if you connect it to everything.</p>
+      <blockquote><p>"Not only do these products grow faster into the enterprise, not only do they do it sooner in their lifecycle, they're also scrutinized by security and IT much more heavily. That has created this perfect storm where they all need what we've built very fast."</p></blockquote>
+      <p>In Victoria Melnikova's experience working with 40+ devtools startups a year, this pattern shows up constantly. The AI wave didn't create a new kind of buyer. It compressed the timeline to enterprise so dramatically that companies need SSO, permissions, and compliance on day one. WorkOS was sitting there with the infrastructure already built. Sometimes timing is just luck. But seven years of building the right thing? That's preparation meeting opportunity.</p>
+
+      <h2>Cross the enterprise chasm or die trying</h2>
+      <p>Michael gave a talk called "Crossing the Enterprise Chasm" at GitHub back in 2019, and honestly, it became the thesis of the entire company. The idea is simple but brutal: companies that cross the gap from early adopters to enterprise win the whole market. Companies that don't? They get acquired or fade away.</p>
+      <p>He used Trello as the cautionary tale. Trello was amazing for small teams. I remember running my first projects on it. But they never figured out how to sell to larger organizations, and they ended up getting absorbed by Atlassian instead of becoming the next Slack or GitHub. Meanwhile, GitHub captured enterprise, and that sticky revenue fueled continued growth and innovation for years.</p>
+      <blockquote><p>"Companies that cross the chasm end up winning the whole market. The revenue is really sticky, the customers stay around, they expand, and it lets you continue to innovate."</p></blockquote>
+      <p>WorkOS exists to collapse that chasm so companies can cross it in weeks instead of years. The CTO of Webflow integrated SSO over a single weekend. That's what Michael means by collapsing the gap. Victoria Melnikova has seen this across the startups she works with: the ones that move upmarket early don't just survive, they dominate.</p>
+
+      <h2>The day he fired his whole marketing team</h2>
+      <p>This one really stuck with me. Michael hired an entire marketing team built for enterprise sales. Then he realized WorkOS was actually a developer-led company. The skillsets were completely different. He compared it to hiring firmware engineers when you actually need web engineers.</p>
+      <p>He gave them good severance and they went to good places, but the lesson was expensive. Product-market fit at WorkOS came from developer experience and the enterprise readiness story, not from sales methodology. And that distinction matters.</p>
+      <blockquote><p>"Most salespeople join after companies have product market fit. They've actually never seen a company pre-PMF. There's no need for a CRO at a company that's pre-PMF. So they just don't know how to see it."</p></blockquote>
+      <p>He used a restaurant analogy that I loved: it's like someone telling you the menu design is really important, and you're asking, but what about the food? Shouldn't the food be good first? Product is number one. Always. The sales methodology comes later.</p>
+
+      <h2>Hire plumbers, not prima donnas</h2>
+      <p>Michael told me something that completely reframed how I think about infrastructure companies. Plumbing, he said, has saved more lives than any other technology ever made. More than medicine, more than transportation. Plumbing is what lets cities exist. But there are no monuments to plumbers. No statues in the town square.</p>
+      <p>WorkOS hires people who find deep satisfaction in invisible work. The lighting crew, not the prima donnas on stage. People who get their kicks from watching other companies succeed on the platform. This cultural filter is everything for an infrastructure company where the ultimate compliment is that customers forget you exist.</p>
+      <p>I've seen a lot of startups struggle with this. They hire people who want the spotlight, the conference talks, the Twitter followers. But if you're building plumbing, you need people who are genuinely happy when the show runs perfectly and nobody thinks about the lighting. Michael has built that culture from day one, and it shows in how WorkOS operates: distributed since before COVID, people staying for years, institutional knowledge accumulating like compound interest.</p>
+
+      <h2>Talk to users: the algorithm that burns out bad ideas</h2>
+      <p>Here's the thing about founders and talking to users. Michael said something that made me laugh out loud: engineers exhaust every other possibility before talking to customers. Building is fun. It's a creative flow state. And users ruin it with feedback.</p>
+      <p>But no product design survives contact with the market. At WorkOS, user conversations are institutionalized for every new feature. If a team presents a design doc and hasn't talked to users, they're sent back to do it before the next meeting. Nope. Go talk to five or ten companies. Come back next week.</p>
+      <blockquote><p>"If you force yourself to constantly talk to users, it's this algorithm that will burn out the bad ideas and let you converge to the good ones. You will find the good ideas if you go talk to people."</p></blockquote>
+      <p>WorkOS built in stealth for the first two years, but Michael was talking to users the entire time. There was no public signup, but it was never a secret. He was yelling it from the mountaintops, getting investors to introduce him to people, meeting founders everywhere. And when they launched on Hacker News in March 2020, right in the middle of COVID lockdowns, the comments were overwhelmingly positive. People said: I've had to build this before and I never want to do it again. That's product-market fit speaking.</p>
+
+      <h2>Perfection is when the product disappears</h2>
+      <p>I ended by asking Michael what makes him feel great about what he's doing. His answer was the most quietly powerful thing Victoria Melnikova has heard on Dev Propulsion Labs. He doesn't want the firework that burns bright and everyone sees. He wants the continued small push in the background that makes things just a little bit nicer for everyone.</p>
+      <blockquote><p>"Perfection in a product is not something that you pay attention to. Perfection is when it disappears into the background. The best cello is the one that becomes part of the body, part of the musician. The cello and human are the same thing."</p></blockquote>
+      <p>Being a very small part of Cursor's journey to a billion-dollar run rate, or Anthropic's growth, or Webflow scaling from $5M to $200M in revenue. That's what fills his cup. When someone asked if he'd ever sell the company, he said: never in a million years. He's found his thing. And you know what? After spending an hour with him, I completely believe it. There's this surfer-calm energy about Michael that only comes from someone who knows exactly what wave they're riding.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

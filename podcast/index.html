@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Propulsion Labs | Victoria Melnikova</title>
+  <meta name="description" content="Victoria Melnikova interviews the founders behind the world's most successful developer tools on Dev Propulsion Labs. Supabase, Sentry, Cursor, Resend, WorkOS, PlanetScale, and more.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dev Propulsion Labs | Victoria Melnikova">
+  <meta property="og:description" content="Victoria Melnikova interviews the founders behind the world's most successful developer tools.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/">
+  <meta property="og:image" content="https://vmelnikova.com/avatar.webp">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="Dev Propulsion Labs | Victoria Melnikova">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #111111;
+      --text: #d4d4d8;
+      --text-strong: #fafafa;
+      --text-muted: #a1a1aa;
+      --text-faint: #8b8b94;
+      --text-dim: #7a7a84;
+      --border: #2e2e33;
+      --link-underline: #4a4a52;
+      --toggle-bg: #1e1e22;
+      --toggle-active-bg: #2e2e33;
+    }
+
+    [data-theme="light"] {
+      --bg: #fafaf9;
+      --text: #3d3935;
+      --text-strong: #1c1917;
+      --text-muted: #57534e;
+      --text-faint: #6b6560;
+      --text-dim: #8a8580;
+      --border: #e0dedc;
+      --link-underline: #b5b0ab;
+      --toggle-bg: #eeedeb;
+      --toggle-active-bg: #d6d4d1;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #fafaf9;
+        --text: #3d3935;
+        --text-strong: #1c1917;
+        --text-muted: #57534e;
+        --text-faint: #6b6560;
+        --text-dim: #8a8580;
+        --border: #e0dedc;
+        --link-underline: #b5b0ab;
+        --toggle-bg: #eeedeb;
+        --toggle-active-bg: #d6d4d1;
+      }
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-strong);
+    }
+
+    .theme-toggle {
+      display: flex;
+      gap: 2px;
+      background: var(--toggle-bg);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .theme-toggle button {
+      background: none;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-faint);
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .theme-toggle button:hover {
+      color: var(--text-strong);
+    }
+
+    .theme-toggle button.active {
+      background: var(--toggle-active-bg);
+      color: var(--text-strong);
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 24px 120px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+
+    .page-intro {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    .page-intro a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .page-intro a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .episode-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .episode-card {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+
+    .episode-card:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .episode-card:last-child {
+      border-bottom: none;
+    }
+
+    .episode-card a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .episode-card a:hover .episode-title {
+      color: var(--text-strong);
+    }
+
+    .episode-thumb {
+      width: 140px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      transition: opacity 0.2s;
+    }
+
+    .episode-card a:hover .episode-thumb {
+      opacity: 0.85;
+    }
+
+    .episode-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .episode-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 4px;
+      transition: color 0.2s;
+      letter-spacing: -0.01em;
+    }
+
+    .episode-meta {
+      font-size: 12px;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+
+    .episode-description {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .episode-thumb {
+        width: 100px;
+      }
+
+      .episode-description {
+        display: none;
+      }
+
+      nav {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .content {
+        padding: 48px 20px 80px;
+      }
+
+      .episode-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>Dev Propulsion Labs</h1>
+    <p class="page-intro">I interview the founders and builders behind the world's most successful developer tools. Face-to-face conversations in San Francisco about what actually works in building, growing, and monetizing products for developers. <a href="https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H">Watch on YouTube</a></p>
+
+    <ul class="episode-list">
+      <li class="episode-card">
+        <a href="/podcast/anuraag-gutgutia-truefoundry.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/N72OThsQaE8/maxresdefault.jpg" alt="Anuraag Gutgutia on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Anuraag Gutgutia taught me about trust as the only currency in enterprise AI sales</p>
+          <p class="episode-meta">March 2026 &middot; TrueFoundry</p>
+          <p class="episode-description">From hedge funds to AI infrastructure, the layered trust framework for enterprise sales, surviving the year before your first big deal, and why voice agents are the next frontier.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/stas-kelvich-neon.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/fTekip2Uyvw/maxresdefault.jpg" alt="Stas Kelvich on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush</p>
+          <p class="episode-meta">March 2026 &middot; Neon</p>
+          <p class="episode-description">From quantum physics to co-founding a database company acquired by Databricks for $1B. Serverless Postgres, agent-driven infrastructure, and how 90 lawyers close a deal in 30 days.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/harjot-gill-coderabbit.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/B7CRwockaa8/maxresdefault.jpg" alt="Harjot Gill on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Harjot Gill taught me about going viral in Japan and building guardrails for AI code</p>
+          <p class="episode-meta">February 2026 &middot; CodeRabbit</p>
+          <p class="episode-description">AI code review as the new bottleneck, going viral on zen.dev, PLG meets enterprise, and why old startup playbooks are dead.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/david-gomes-cursor.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/oKAX7LsE11s/maxresdefault.jpg" alt="David Gomes on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What David Gomes taught me about why half of developers still aren't using AI</p>
+          <p class="episode-meta">February 2026 &middot; Cursor</p>
+          <p class="episode-description">Inside Cursor's wildly different engineering workflows, building a 50-person team in Portugal, and surviving Neon's $1B Databricks acquisition.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/monica-sarbu-xata.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/xF4IEuPgICU/maxresdefault.jpg" alt="Monica Sarbu on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Monica Sarbu taught me about rebuilding a product from scratch and leading with people</p>
+          <p class="episode-meta">January 2026 &middot; Xata</p>
+          <p class="episode-description">The question that changed Xata's product direction, rebuilding from the ground up, diverse teams winning, and people-first leadership from Romania to San Francisco.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/piyush-agarwal-reo-dev.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/fkcwwdDrOMs/maxresdefault.jpg" alt="Piyush Agarwal on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Piyush Agarwal taught me about why devtools companies don't know their customers</p>
+          <p class="episode-meta">January 2026 &middot; Reo.dev</p>
+          <p class="episode-description">Intent signals turning 2% conversion into 26%, GTM as the hardest unsolved problem in devtools, and building a first product as a Google Sheet.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/david-cramer-sentry.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/wAx1IpJi6JI/maxresdefault.jpg" alt="David Cramer on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What David Cramer taught me about building for the Fortune 500,000</p>
+          <p class="episode-meta">December 2025 &middot; Sentry</p>
+          <p class="episode-description">Mass-market pricing, 4M+ developers through pure bottom-up adoption, delegating both CEO and CTO, and why 20-year-olds should stop starting companies.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/abhi-aiyer-mastra.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/ORARUuQ-I9I/maxresdefault.jpg" alt="Abhi Aiyer on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Abhi Aiyer taught me about making moves in AI tooling</p>
+          <p class="episode-meta">December 2025 &middot; Mastra</p>
+          <p class="episode-description">TypeScript for AI agents, the "that's cool" pivot moment, a viral book as growth engine, and raising from 120+ builder-investors.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/michael-grinich-workos.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/yiGutRWdiAg/maxresdefault.jpg" alt="Michael Grinich on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Michael Grinich taught me about building invisible infrastructure</p>
+          <p class="episode-meta">November 2025 &middot; WorkOS</p>
+          <p class="episode-description">The plumbing behind OpenAI and Cursor, crossing the enterprise chasm, firing the marketing team, and why perfection means disappearing.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/ivan-burazin-daytona.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/6WCwO_oGsBY/maxresdefault.jpg" alt="Ivan Burazin on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Ivan Burazin taught me about walking away from revenue to bet on agents</p>
+          <p class="episode-meta">November 2025 &middot; Daytona</p>
+          <p class="episode-description">Pivoting from $300K ARR on New Year's Eve, composable computers for AI agents, 19 years with the same co-founders, and genius zone go-to-market.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/paul-copplestone-supabase.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/ucyk5Z0u2S4/maxresdefault.jpg" alt="Paul Copplestone on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Paul Copplestone taught me about scaling Supabase to 5M developers with no meetings</p>
+          <p class="episode-meta">November 2025 &middot; Supabase</p>
+          <p class="episode-description">Hiring ex-founders with beaten-down egos, why vibe coding isn't a bubble, how Launch Weeks accidentally became a movement, and building a 30-year database company.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/zeno-rocha-resend.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/THnXhWL-pA0/maxresdefault.jpg" alt="Zeno Rocha on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Zeno Rocha taught me about building work so good your heroes want to copy it</p>
+          <p class="episode-meta">October 2025 &middot; Resend</p>
+          <p class="episode-description">$18M Series A by obsessing over every detail, 20K waitlist from founder brand, cutting scope but never quality, and the jab-jab-right-hook open source strategy.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/sam-lambert-planetscale.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/rHkaOoYQQq8/maxresdefault.jpg" alt="Sam Lambert on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Sam Lambert taught me about databases that never go down</p>
+          <p class="episode-meta">October 2025 &middot; PlanetScale</p>
+          <p class="episode-description">Surviving the AWS US-East outage, scaling from 750 to hundreds of thousands of databases, taste as competitive advantage, and vibe-coded databases.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/jeff-huber-chroma.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/tec6K0EJ8pE/maxresdefault.jpg" alt="Jeff Huber on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What Jeff Huber taught me about context engineering and why RAG is brain rot</p>
+          <p class="episode-meta">September 2025 &middot; Chroma</p>
+          <p class="episode-description">Context engineering over retrieval, million-token windows changing everything, engine-vs-car open source strategy, and design as a moat in AI infrastructure.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/jose-valim-elixir.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/ihn2fuc_ueQ/maxresdefault.jpg" alt="José Valim on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What José Valim taught me about building a language from curiosity</p>
+          <p class="episode-meta">June 2025 &middot; Elixir</p>
+          <p class="episode-description">13 years of Elixir, choosing technical decisions over adoption trends, radical decentralization, and the future of AI tooling with Tidewave.</p>
+                  </div>
+        </a>
+      </li>
+
+      <li class="episode-card">
+        <a href="/podcast/dhh-rails.html">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/6yykftf5I3c/maxresdefault.jpg" alt="DHH on Dev Propulsion Labs" loading="lazy">
+          <div class="episode-info">
+          <p class="episode-title">What DHH taught me about staying unconventional for 20 years</p>
+          <p class="episode-meta">December 2023 &middot; Ruby on Rails / Basecamp</p>
+          <p class="episode-description">20 years of Rails, the cloud exodus, bootstrapping without VC, opinionated software, and the racing driver mindset applied to building companies.</p>
+                  </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') {
+        root.setAttribute('data-theme', 'light');
+      } else if (theme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+      } else {
+        root.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

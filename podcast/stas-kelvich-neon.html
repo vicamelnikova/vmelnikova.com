@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush | Victoria Melnikova</title>
+  <meta name="description" content="Neon co-founder Stas Kelvich on going from quantum physics to Postgres, why they built their own cloud, how the Databricks acquisition closed in 30 days with 90 lawyers, and what agents mean for database infrastructure.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/stas-kelvich-neon.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush">
+  <meta property="og:description" content="Neon co-founder Stas Kelvich on going from quantum physics to Postgres, why they built their own cloud, how the Databricks acquisition closed in 30 days with 90 lawyers, and what agents mean for database infrastructure.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/stas-kelvich-neon.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/fTekip2Uyvw/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush">
+  <meta name="twitter:description" content="Neon co-founder Stas Kelvich on going from quantum physics to Postgres, why they built their own cloud, how the Databricks acquisition closed in 30 days with 90 lawyers, and what agents mean for database infrastructure.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2026-03-10",
+    "description": "Neon co-founder Stas Kelvich on going from quantum physics to Postgres, why they built their own cloud, how the Databricks acquisition closed in 30 days with 90 lawyers, and what agents mean for database infrastructure.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/stas-kelvich-neon.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; March 2026</p>
+    <h1>What Stas Kelvich taught me about Neon's $1B acquisition and the agent gold rush</h1>
+    <p class="article-intro">Neon's co-founder went from measuring time in attoseconds as a quantum physicist to closing a billion-dollar Databricks deal in 30 days. This conversation was one of the most technically grounded and strategically sharp ones Victoria Melnikova has had on Dev Propulsion Labs.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/fTekip2Uyvw" title="Stas Kelvich on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/fTekip2Uyvw">YouTube</a>
+        <a href="https://open.spotify.com/episode/1mHXui7GsyDM1mERasjAfc">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/stas-kelvich-of-neon-on-his-back-story-adapting-to/id1714823787?i=1000754386218">Apple Podcasts</a>
+        <a href="https://evilmartians.com/events/stas-kelvich-from-quantum-physics-to-neons-1b-databricks-acquisition">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>From laser physics to fixing Postgres</h2>
+      <p>Stas trained as a physicist working on strong laser fields and attosecond time measurement. But he was always coding on the side. Ruby on Rails since version one, around 2007. His path into Postgres started the way many great engineering stories do: he had a problem nobody had solved.</p>
+      <p>He needed multi-dimensional indexing for a travel booking engine, found that Postgres couldn't handle it well, looked into why, and fixed it. The Postgres community welcomed the contribution, and he kept going. When I asked why he stuck with databases, his answer was fascinating. Databases have a bigger-than-average institutional memory. Papers from the 1970s are still useful because the fundamentals haven't changed.</p>
+      <blockquote><p>"When you contribute to Postgres, you do something small, and people across the world start using it. People write emails from projects you didn't even know existed."</p></blockquote>
+      <p>Victoria Melnikova has had several Postgres database founders on Dev Propulsion Labs, and the community is always described the same way: vocal, opinionated, welcoming. Stas embodies that perfectly.</p>
+
+      <h2>The bet that made Neon: building the cloud, not just the database</h2>
+      <p>Co-founder Nikita Shamgunov had the idea to separate storage and compute for Postgres. He recruited Stas and Heikki Linnakangas from the Postgres community. But one of the earliest and most consequential decisions was whether to build just the database engine or the full cloud platform. They chose the cloud.</p>
+      <p>Stas put it bluntly: selling software for other vendors to host is a bad business model. You need to own the stack end to end. That bet meant a larger, more expensive engineering team. Their cloud team was maybe three people while the engine side had 10 to 15. But it created a much stronger differentiator.</p>
+      <p>In Victoria Melnikova's experience across the startups she works with, this pattern is clear. The ones who own the full stack have more control over the developer experience, and that's what ultimately drives adoption. The ones who build an engine and hope someone else will host it well are playing a harder game.</p>
+
+      <h2>How they solved sharding by not solving it</h2>
+      <p>I asked Stas about Supabase's multi-tenant sharding announcement, expecting a technical deep-dive. Instead, he gave me the most strategic answer possible.</p>
+      <blockquote><p>"We solved the sharding problem by not solving it. We concentrated on making one Postgres database work really well."</p></blockquote>
+      <p>The previous generation of distributed Postgres-compatible databases, CockroachDB and YugabyteDB, pivoted after struggling to gain momentum. Stas says the majority of the market by revenue is single databases that are fully Postgres-compatible, and that's a bigger opportunity than sharding for a smaller niche. This is a David Cramer-level focus move. Know what you're not going to do, and don't waver.</p>
+
+      <h2>When agents stress-tested everything overnight</h2>
+      <p>Here's a detail that blew my mind. When Replit launched its Agent product, each database on Neon ended up with around 500 branches, often maxing out tier limits. That's a usage pattern completely different from humans. Neon had to do significant infrastructure work at the metadata and orchestration level to handle it.</p>
+      <p>The thing is, they didn't plan for agents. Their product philosophy from day one was to make databases simple for developers who aren't database experts. Two clicks to create a database. GitHub-integrated branching for CI/CD. It turns out that if it's easier to set up for a junior developer, it's easier for agents too. The decisions they made for simplicity accidentally prepared them for the agent wave.</p>
+      <p>I talk about this concept a lot. Agent experience is a new service category. The startups who invested in great developer experience early are now reaping the benefits as agents become their biggest power users.</p>
+
+      <h2>Ninety lawyers and blank signature pages</h2>
+      <p>The Neon acquisition by Databricks for $1B closed in about 30 days. For a deal that size, that's almost unheard of. At one point, 90 lawyers were working on it simultaneously. And here's the part that made me laugh. Employees signed papers with blank fields because there wasn't time for custom contracts with proper share numbers.</p>
+      <blockquote><p>"A lot of people were worried, but everyone went with it."</p></blockquote>
+      <p>Stas says the deal made sense because Neon wanted to move upmarket into enterprise, and doing that alone takes years. You need salespeople, iterations, and you're suddenly operating in a human domain rather than an engineering domain. After an earlier Azure integration moved slowly, they started exploring who could help them compete with the hyperscalers. Databricks was already investing in self-serve and needed a Postgres offering to complement Lakehouse. The fit was natural.</p>
+      <p>One year in, the org structure stayed mostly the same. Attrition was minimal. Stas says the biggest positive change is access to strong Databricks engineers and a stronger hiring brand. Challenging the hyperscalers feels more realistic with Databricks' backing than it ever did alone.</p>
+
+      <h2>Stay in the loop. That's the whole playbook</h2>
+      <p>Stas experienced what he calls a personal "phase transition" around late 2025 when AI coding tools went from mostly not working on his tasks to mostly working. He can now build pretty big things and run experiments without touching an editor.</p>
+      <p>His advice for founders is refreshingly simple: stay in the loop, experiment when something feels right, and move fast. You don't need to be the smartest person. You need to be in the right place at the right time. It's a gold rush, and consumption-based business models are on the right side of it.</p>
+      <p>That last point resonated with me. As someone who talks to 40+ devtools startups a year on Dev Propulsion Labs and through Evil Martians, Victoria Melnikova sees that the ones with consumption-based models are having a very different 2026 than the ones on per-seat pricing. Agents don't buy seats. They consume infrastructure. If your business model aligns with that, you're in a good position.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

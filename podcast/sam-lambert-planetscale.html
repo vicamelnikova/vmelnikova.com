@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Sam Lambert taught me about databases that never go down | Victoria Melnikova</title>
+  <meta name="description" content="PlanetScale CEO Sam Lambert talks with Victoria Melnikova about surviving the AWS outage, why operational excellence beats feature velocity, what makes great devtools founders, and why vibe-coded databases are a completely different market.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/sam-lambert-planetscale.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Sam Lambert taught me about databases that never go down">
+  <meta property="og:description" content="PlanetScale CEO Sam Lambert talks with Victoria Melnikova about surviving the AWS outage, why operational excellence beats feature velocity, and what makes great devtools founders.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/sam-lambert-planetscale.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/rHkaOoYQQq8/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2025-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Sam Lambert taught me about databases that never go down">
+  <meta name="twitter:description" content="PlanetScale CEO Sam Lambert talks with Victoria Melnikova about surviving the AWS outage, why operational excellence beats feature velocity, and what makes great devtools founders.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Sam Lambert taught me about databases that never go down",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2025-10-20",
+    "description": "PlanetScale CEO Sam Lambert talks with Victoria Melnikova about surviving the AWS outage, why operational excellence beats feature velocity, what makes great devtools founders, and why vibe-coded databases are a completely different market.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/sam-lambert-planetscale.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; October 2025</p>
+    <h1>What Sam Lambert taught me about databases that never go down</h1>
+    <p class="article-intro">I'm Victoria Melnikova, and I recorded this episode of Dev Propulsion Labs on the same day a 12-hour AWS US-East-1 outage knocked millions of websites offline. PlanetScale's customers stayed up. Sam walked into our conversation running on almost no sleep, fresh off an all-night incident watch. And he was grinning.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/rHkaOoYQQq8" title="Sam Lambert on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/rHkaOoYQQq8">YouTube</a>
+        <a href="https://evilmartians.com/events/sam-lambert-ceo-of-planetscale-databases-that-never-go-down">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p>Here's the thing about PlanetScale: they don't compete on features. They compete on never going down. And on the day we recorded, reality proved the point better than any marketing deck ever could. Sam tweeted a screenshot of one of the largest consumer apps in America running on PlanetScale. All green. The rest of the internet was melting.</p>
+
+      <h2>The day the marketing paid off</h2>
+
+      <p>I was watching Silicon Valley for the first time when we recorded this. The timing was perfect. Pied Piper betting on metal, and here I am interviewing Sam about bare metal inside AWS. He was quick to clarify: PlanetScale still runs inside AWS, on their own metal machines. The moat isn't the hardware. It's extreme fault tolerance baked into how they operate.</p>
+
+      <blockquote><p>"It shows like the day the marketing pays off. You have to have days like this to show that you actually are resilient."</p></blockquote>
+
+      <p>Sam calls PlanetScale a "tier-zero database" because of how critical their infrastructure is to the world. Every Slack message goes through a Vitess cluster. Every Cash App transaction. That's the scale we're talking about. And the team has published their rules for extreme fault tolerance publicly. So when a day like this hits, it's not a surprise. It's the plan working.</p>
+
+      <p>Victoria Melnikova talks to 40+ devtools startups a year, and honestly, this level of operational confidence is something I almost never see. Most companies would be scrambling. Sam was doing a podcast interview.</p>
+
+      <h2>From 750 users to hundreds of thousands</h2>
+
+      <p>The PlanetScale origin story is not what most people think. When Sam joined as CPO, the company was essentially a consultancy with about 750 users, supporting companies like Slack and Bloomberg running Vitess on-prem. That was it. No cloud product. No mass audience.</p>
+
+      <p>Sam saw the opportunity to turn it into a cloud platform. The Vitess team went from very little framework compatibility to near-full compatibility, testing against all major framework CI suites. The user base for Vitess grew 61,000% in four years. Nine out of ten Vitess maintainers work at PlanetScale.</p>
+
+      <p>When the old cloud product was shut down and the new beta launched, they gained more than double those 750 users on day one. Let me tell you, that kind of momentum doesn't happen by accident. Sam hired heavily from GitHub, brought in people who understood what it means to operate at massive scale, and built a culture of operational excellence from the ground up.</p>
+
+      <h2>Why vibe-coded databases are a totally different market</h2>
+
+      <p>I asked Sam about vibe coding and AI-generated apps, and he drew a sharp line that I think more founders need to hear. He loves AI coding. He uses it constantly. But he's clear about the difference between AI-assisted development and vibe coding.</p>
+
+      <blockquote><p>"Within the first hour of a database being used, it will never get used again. So you're seeing these incredible user growth numbers for companies, but the retention is abysmal."</p></blockquote>
+
+      <p>Companies optimizing for vibe-coded databases build systems designed to turn off cheaply. PlanetScale builds the opposite: databases designed to run 24/7/365 under extreme load for global applications where there is no off time. Completely different set of constraints. Sam doesn't even understand why people use Postgres for throwaway databases. SQLite would do the job.</p>
+
+      <p>In Victoria Melnikova's experience working with devtools startups, this pattern comes up often. There's a real temptation to chase the vibe coding wave for its growth numbers. Sam's perspective is a useful counterweight: those numbers might not mean what you think they mean.</p>
+
+      <h2>Taste and tribal intuition make great founders</h2>
+
+      <p>Sam has invested in Railway, Graphite, and Fly.io. He was an early leader at GitHub. So when I asked what makes a successful devtools founder, I was expecting a technical answer. Instead he said one word: taste.</p>
+
+      <blockquote><p>"Developers are very tribal. A lot of people think software engineers are the most objective buyers out there. That's not true. It comes down to brand, the chosen language they like. We're not always cold and calculating when we pick things."</p></blockquote>
+
+      <p>He pointed to Guillermo Rauch and the GitHub founders as people who understood their communities so deeply that success was almost inevitable. GitHub's insistence on good technical writing, its focus on enjoyment. All of it came from Ruby's culture of caring about the developer experience. Ruby traded off performance for the joy of writing code. And the founders built that ethos into everything.</p>
+
+      <p>This really stuck with me. I see founder after founder trying to win on benchmarks and feature matrices. Sam's argument is that taste, brand, and community feeling are what actually drive adoption. The technical stuff matters, of course. But it's not the whole story.</p>
+
+      <h2>"I just don't want to think about my database anymore"</h2>
+
+      <p>That's the magic phrase Sam hears from customers. And honestly, it captures everything PlanetScale is about. Databases are a moving target. As companies grow, the load changes, the queries change, and someone has to stay ahead of operations. It's constant gardening.</p>
+
+      <p>Sam shared stories about Whop and Kick, companies that started with tiny first bills on a credit card and grew into massive traffic. Kick is now at every sporting event. Whop is one of the largest consumer apps in America. Both had the foresight to put their databases on PlanetScale from the beginning, and that meant they never hit the painful database bottleneck that kills so many growing companies.</p>
+
+      <p>The alternative is what Sam sees with migration customers, companies that ran out of steam on RDS or Aurora and have to do painful online migrations where downtime is simply not an option. He's picked the hardest area of the market to serve on purpose. And PlanetScale is now profitable, growing rapidly, and Sam says he wakes up every day hoping it never ends.</p>
+
+      <blockquote><p>"I get to wake up and log online. Talk to 60 people that I find inspiring and challenging. They are smart, kind, funny. And we control our own destiny."</p></blockquote>
+
+      <p>That's the warm fuzzy. And after this conversation on Dev Propulsion Labs, Victoria Melnikova believes him.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

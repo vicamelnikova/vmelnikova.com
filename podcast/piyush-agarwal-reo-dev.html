@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Piyush Agarwal taught me about why devtools companies don't know their customers | Victoria Melnikova</title>
+  <meta name="description" content="Reo.dev co-founder Piyush Agarwal talks with Victoria Melnikova about why go-to-market is the hardest unsolved problem in developer tools, how intent signals turn a 2% response rate into 26%, and why their first product was a Google Sheet.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/piyush-agarwal-reo-dev.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Piyush Agarwal taught me about why devtools companies don't know their customers">
+  <meta property="og:description" content="Reo.dev co-founder Piyush Agarwal on why go-to-market is the hardest unsolved problem in developer tools and how intent signals change everything.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/piyush-agarwal-reo-dev.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/fkcwwdDrOMs/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2026-01-12">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Piyush Agarwal taught me about why devtools companies don't know their customers">
+  <meta name="twitter:description" content="Reo.dev co-founder Piyush Agarwal on why go-to-market is the hardest unsolved problem in developer tools and how intent signals change everything.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Piyush Agarwal taught me about why devtools companies don't know their customers",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2026-01-12",
+    "description": "Reo.dev co-founder Piyush Agarwal talks with Victoria Melnikova about why go-to-market is the hardest unsolved problem in developer tools, how intent signals turn a 2% response rate into 26%, and why their first product was a Google Sheet.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/piyush-agarwal-reo-dev.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; January 2026</p>
+    <h1>What Piyush Agarwal taught me about why devtools companies don't know their customers</h1>
+    <p class="article-intro">I'm Victoria Melnikova, and on this episode of Dev Propulsion Labs, Piyush told me a story that stopped me cold. A friend of his had been building a devtool startup for four years. When Piyush asked how he meets his customers, the friend said: "We go to conferences and we run into them." Four years in. No idea who his users are.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/fkcwwdDrOMs" title="Piyush Agarwal on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://www.youtube.com/watch?v=fkcwwdDrOMs">YouTube</a>
+        <a href="https://open.spotify.com/episode/02gvzePDS7R7hH7Irz4NRc">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/piyush-agarwal-of-reo-dev-on-why-gtm-starts-with/id1714823787?i=1000744885978">Apple Podcasts</a>
+        <a href="https://evilmartians.com/events/piyush-agarwal-of-reo-dev-intent-signals-and-devtool-gtm">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p>This is a problem Victoria Melnikova sees constantly. I work with 40+ devtools startups a year, and the number of companies that have millions of open-source users and still can't tell you who their customers are is staggering. Piyush didn't just see this gap. He built a company to close it.</p>
+
+      <h2>Go-to-market is the hardest unsolved problem in devtools</h2>
+
+      <p>Piyush's thesis is bold: go-to-market for developer tools is fundamentally different from selling any other software, and most companies haven't adapted. Here's the shift that happened over the last two decades. It used to be Yellow Pages selling. Someone would sell to the CTO, the tool would get handed down, and seven out of ten times it sat on the shelf. They even have a phrase for it: shelf-ware.</p>
+
+      <p>Now it's completely democratized. Developers influence the decisions. CTOs sign checks but aren't the most technically savvy decision-makers anymore. Developer tools have become so vertically specialized that no CTO is an expert across every domain. A front-end background doesn't prepare you to evaluate DevOps tools. A platform engineering background doesn't help you pick a data pipeline.</p>
+
+      <blockquote><p>"The whole crux of solving this go-to-market problem is figuring out who needs it. And if you can't figure that out, it's very, very hard to sell."</p></blockquote>
+
+      <p>Try selling a database to a team that doesn't need one. It's just not going to happen. And yet, that's essentially what most outbound efforts do. Spray and pray across thousands of companies without knowing which engineering teams are actually struggling with the problem your product solves.</p>
+
+      <h2>From 2% to 26% with intent signals</h2>
+
+      <p>This is where Reo.dev gets interesting. They track developer behavior across 30+ platforms to identify moments when engineering teams are struggling with a specific problem. Reaching out before they need help? Gets ignored. Reaching out four weeks late? You missed the window. But when Reo.dev detects intent, what Piyush calls a "moment of truth," the response rate jumps from low single digits to as high as 26%.</p>
+
+      <p>One out of every four engineering buyers responds when you reach out at the right moment with the right solution. That's not a marginal improvement. That's a completely different game.</p>
+
+      <p>Piyush shared a story that really landed. One of their early customers discovered through Reo.dev's data that Tesla was using their open-source product. They had no idea. After that moment, they completely changed their entire marketing strategy. I've seen this firsthand at Evil Martians. We've built over a hundred open-source projects, and some of them are used by companies like Google or Apple, and we find out almost by accident.</p>
+
+      <h2>The first product was a Google Sheet</h2>
+
+      <p>Before building anything, Piyush and his co-founders spent three months, eight hours a day, talking to prospective customers. About 85-90% strongly resonated with the problem. The first prototype? Just data sent to 10 customers via Google Sheets.</p>
+
+      <p>Those early customers didn't care about UI or UX. They were seeing this data for the first time and it was transformative. That research formed the backbone of everything Reo.dev built afterward.</p>
+
+      <p>I love this approach. Too many AI founders today are building without knowing what real problem they're solving. Piyush has a phrase for it: "Date the idea before you marry it." Spend serious time validating. Talk to prospective customers relentlessly. And be ruthless about concluding when something isn't working.</p>
+
+      <h2>Even LangChain needs GTM help</h2>
+
+      <p>Victoria Melnikova pushed back on this one. Why would fast-growing companies like LangChain or Temporal need go-to-market support? Aren't they already growing like crazy?</p>
+
+      <p>Piyush's answer was sharp. Enterprise users are often running open-source products and struggling with problems that the paid product already solves. They just don't know about it. Nobody came and told them. And that's all that was needed.</p>
+
+      <p>He pointed to a real shift he's seen over the last two years. In 2023, most devtool founders treated GTM as an afterthought. That has completely changed. Sustainability and go-to-market are now at the top of every founder's priority list. I'm one of those people who believes open source should be commercialized to become sustainable, so hearing this validated what I see in the market every day.</p>
+
+      <h2>LLMs are becoming a real marketing channel</h2>
+
+      <p>This part of the conversation caught me off guard. Piyush says chatbots like ChatGPT and Claude are generating meaningful traffic for Reo.dev and their customers. If you're not thinking about LLM optimization today, you're already behind.</p>
+
+      <blockquote><p>"Good quality content has become so much more important. It doesn't matter what volume of content you're writing anymore. What matters is the quality and whether it's optimized for an LLM to quickly pick it up."</p></blockquote>
+
+      <p>What works: original, high-quality content that LLMs can absorb as Q&amp;A, and authentic Reddit presence. What doesn't work anymore: derivative SEO content at volume. The age of churning out keyword-stuffed blog posts is over. Even at Evil Martians, we've seen leads this year coming from Perplexity, ChatGPT, and Claude. It's a real channel now, and Piyush confirmed what I've been suspecting. The companies that invest in quality content early are the ones showing up in AI responses.</p>
+
+      <p>When Victoria Melnikova asked Piyush what makes him feel great, his answer was simple: seeing founders grow their businesses because of what Reo.dev does. For a company solving the go-to-market problem that nobody else has cracked, that's a pretty satisfying warm fuzzy.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

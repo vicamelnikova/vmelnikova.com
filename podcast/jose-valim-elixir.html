@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Jos&eacute; Valim taught me about building a language from curiosity | Victoria Melnikova</title>
+  <meta name="description" content="Jos&eacute; Valim, creator of Elixir and founder of Dashbit, on 13 years of building a programming language, why technical decisions beat chasing adoption, and what Tidewave means for AI tooling.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/jose-valim-elixir.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Jos&eacute; Valim taught me about building a language from curiosity">
+  <meta property="og:description" content="Jos&eacute; Valim, creator of Elixir and founder of Dashbit, on 13 years of building a programming language, why technical decisions beat chasing adoption, and what Tidewave means for AI tooling.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/jose-valim-elixir.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/ihn2fuc_ueQ/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2025-06-25">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Jos&eacute; Valim taught me about building a language from curiosity">
+  <meta name="twitter:description" content="Jos&eacute; Valim, creator of Elixir and founder of Dashbit, on 13 years of building a programming language, why technical decisions beat chasing adoption, and what Tidewave means for AI tooling.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Jos\u00e9 Valim taught me about building a language from curiosity",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2025-06-25",
+    "description": "Jos\u00e9 Valim, creator of Elixir and founder of Dashbit, on 13 years of building a programming language, why technical decisions beat chasing adoption, and what Tidewave means for AI tooling.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/jose-valim-elixir.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; June 2025</p>
+    <h1>What Jos&eacute; Valim taught me about building a language from curiosity</h1>
+    <p class="article-intro">Jos&eacute; Valim created Elixir not because he saw a market opportunity, but because he wanted to understand how programming languages work. Thirteen years later, Discord, Supabase, Apple, and Toyota run on it. Victoria Melnikova talked to him on Dev Propulsion Labs about why curiosity beats business plans, why he designed Elixir to not need him, and what he's building next with Tidewave.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/ihn2fuc_ueQ" title="Jos&eacute; Valim on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/ihn2fuc_ueQ">YouTube</a>
+        <a href="https://evilmartians.com/events/jose-valim-13-years-of-elixir-and-the-future-of-ai-tooling">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>His first prototype was horrible, and that was fine</h2>
+      <p>Jos&eacute; didn't set out to create a programming language. He didn't have a CS background. He just wanted to understand how languages work because he thought it would be useful. His first prototype was, in his own words, horrible. He shelved it for eight months.</p>
+      <p>When he came back to it, he asked his co-founders at Plataformatec if he could work on it part-time -- with the explicit caveat that it might lead to nothing. His philosophy: if the learning and the fun are there regardless of the outcome, the risk is worth taking.</p>
+      <p>This really stuck with Victoria Melnikova. Having worked with 40+ devtools startups a year, she finds the ones that start from genuine curiosity tend to build something fundamentally different from the ones that start from a market thesis. The market-thesis founders are always looking over their shoulder. The curiosity-driven founders are looking at the problem. Jos&eacute; looked at the problem for thirteen years, and it turned into one of the most loved programming languages in the world.</p>
+
+      <h2>If all we have is opinions, I prefer mine</h2>
+      <p>Jos&eacute; chose to build Elixir on the Erlang VM -- a battle-tested runtime that was nearly four decades old. Not because it was trendy. Because it was the best technical foundation available. He said something that I keep coming back to: chasing adoption leads to bad decisions because adoption is a moving target.</p>
+      <blockquote><p>"If all we have is opinions, I prefer mine."</p></blockquote>
+      <p>When Elixir launched around 2012, functional programming was hot. Today it isn't. But the technical decisions still hold up. That's the whole point. Show developers the trade-offs, not a sales pitch. Let them decide for themselves based on real information, not hype cycles.</p>
+      <p>Victoria Melnikova has seen so many devtools startups chase whatever paradigm is trending on Twitter this month. And you know what happens? They end up rebuilding their foundation every two years. Jos&eacute;'s approach is the opposite: make the right technical call, build on something battle-tested, and let time prove you right. It takes nerve. But thirteen years of Elixir is proof that it works.</p>
+
+      <h2>The only way to compete without Google behind you</h2>
+      <p>When Elixir emerged, Go had Google. Swift had Apple. Rust had Mozilla. Jos&eacute; had none of that. So he did the only thing that could work: radical decentralization.</p>
+      <p>He designed Elixir to be so extensible that communities could take it into web, machine learning, embedded systems, and data processing without depending on him. Today, he has no idea how some of those domains work. And that's the point. His job is to not get in the way.</p>
+      <p>This is a masterclass in open source strategy. Victoria Melnikova has seen plenty of language creators who want to control everything -- every framework, every library, every direction the community takes. Jos&eacute; went the other way entirely. He built the language so well that communities could take ownership of entire verticals. Phoenix, the web framework built by Chris McCord, was a pivotal moment. It didn't just copy ideas from other ecosystems. It asked: what if we leverage everything this technology can actually do?</p>
+
+      <h2>When consulting feeds the open source machine</h2>
+      <p>Jos&eacute; runs Dashbit, an Elixir development subscription where companies can ask questions about applying Elixir to their specific domains. But here's the thing that makes it brilliant: he doesn't just answer the questions. He updates the documentation instead, so the next person finds the answer already there.</p>
+      <p>Client questions reveal friction points. Those friction points turn into new open source projects, documentation improvements, or language features. The built-in code formatter, for example, came directly from teams fighting over code style. Instead of letting that argument repeat across every Elixir team forever, he just solved it at the language level.</p>
+      <p>I love this model because it turns consulting revenue into community infrastructure. Every paid engagement makes the free product better. Every documentation update prevents the same question from being asked again. It's the exact same philosophy Abhi from Mastra described to me: optimize for not having the same conversation twice. But Jos&eacute; has been doing it for over a decade.</p>
+
+      <h2>Marketing matters, even for programming languages</h2>
+      <p>Jos&eacute; knew from his Ruby on Rails background that the "build it and they will come" mindset doesn't work. He actively reached out to developers and CTOs, spoke at events, and attracted influential early adopters like Dave Thomas, who wrote an entire book on Elixir.</p>
+      <p>This is something I see a lot of technically brilliant founders struggle with. They assume the code speaks for itself. It doesn't. Jos&eacute; understood that getting the right people excited early would create a multiplier effect. And it did. Phoenix became the proof point that Elixir could power real web applications, and the community grew from there.</p>
+      <p>The companies using Elixir today tell the story: Discord, Remote, Supabase, Fly.io, Apple, Toyota, BBC, PepsiCo, Mozilla. That's not a niche language. That's a language that earned its place through technical excellence and smart community building over more than a decade.</p>
+
+      <h2>Tidewave: AI tools that understand more than code</h2>
+      <p>Jos&eacute; started Tidewave because he saw a gap nobody was filling. AI coding tools live inside the editor and understand code. But development is more than code. If a user experience is broken, pointing at a page element and asking "why is this happening?" is more natural than translating the problem into code terms for an AI.</p>
+      <p>He wants higher-level tools specific to web development, game engines, and other verticals. He built Tidewave after Anthropic released MCP, which finally gave him the building blocks to do it himself. His vision: developers who work locally deserve the same great experience as cloud-hosted tools like Bolt.new and phoenix.new.</p>
+      <blockquote><p>"If a user experience is broken, pointing at a page element and asking 'why is this happening?' is more natural than translating the problem into code terms for an AI."</p></blockquote>
+      <p>Honestly, this is the kind of insight that only comes from someone who has spent thirteen years thinking about developer experience at the deepest level. Jos&eacute; isn't chasing the AI trend. He's applying the same curiosity-driven approach that created Elixir to a completely new problem space. And if the last thirteen years are any indication, he's going to build something that lasts.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

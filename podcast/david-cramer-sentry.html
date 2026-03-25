@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What David Cramer taught me about building for the Fortune 500,000. Victoria Melnikova</title>
+  <meta name="description" content="Sentry founder David Cramer on why mass-market pricing beats enterprise sales, how he delegated CEO and CTO roles while keeping influence, and why 20-year-olds should stop starting companies.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/david-cramer-sentry.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What David Cramer taught me about building for the Fortune 500,000">
+  <meta property="og:description" content="Sentry founder David Cramer on why mass-market pricing beats enterprise sales, how he delegated CEO and CTO roles while keeping influence, and why 20-year-olds should stop starting companies.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/david-cramer-sentry.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/wAx1IpJi6JI/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2025-12-15">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What David Cramer taught me about building for the Fortune 500,000">
+  <meta name="twitter:description" content="Sentry founder David Cramer on why mass-market pricing beats enterprise sales, how he delegated CEO and CTO roles while keeping influence, and why 20-year-olds should stop starting companies.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What David Cramer taught me about building for the Fortune 500,000",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2025-12-15",
+    "description": "Sentry founder David Cramer on why mass-market pricing beats enterprise sales, how he delegated CEO and CTO roles while keeping influence, and why 20-year-olds should stop starting companies.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/david-cramer-sentry.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; December 2025</p>
+    <h1>What David Cramer taught me about building for the Fortune 500,000</h1>
+    <p class="article-intro">I'm Victoria Melnikova, and I sat down with the founder of Sentry, the tool used by 4 million+ developers, and walked away with a completely different understanding of what "enterprise" should mean for devtools companies.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/wAx1IpJi6JI" title="David Cramer on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/wAx1IpJi6JI">YouTube</a>
+        <a href="https://evilmartians.com/events/david-cramer-founder-of-sentry-building-for-the-fortune-500-000">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>The phrase that reframed everything for me</h2>
+      <p>I talk to 40+ devtools startups a year, and the conversation almost always turns to the same question: when do we go enterprise? David Cramer has a very different answer. He borrowed a phrase from Atlassian that I haven't been able to stop thinking about since.</p>
+      <blockquote><p>"We build for the Fortune 500,000 instead of the Fortune 500. Every single decision we make flows from that."</p></blockquote>
+      <p>Sentry hasn't raised prices in nearly a decade. They rejected FedRAMP. They won't operate in China. Early on, they turned away enterprise RFPs from insurance companies and banks. And you know what happened? Many of those companies came back inbound when they were ready. They became customers on Sentry's terms, not the other way around. In Victoria Melnikova's experience working with 40+ startups a year, this pattern plays out again and again. The ones who chase enterprise too early end up distorting their product for a handful of accounts. David's approach is the opposite. Make the product so good and so accessible that the enterprise comes to you.</p>
+
+      <h2>From Burger King to the Django ecosystem</h2>
+      <p>David grew up in a small town in Nebraska. Worked at Burger King at 15, spent summers detasseling corn. That meant walking through cornfields pulling the tops off corn stalks in the heat. He couldn't afford a computer but was obsessed with them. When he finally got one, he taught himself to code through mIRC scripting, got into the Python and Django ecosystem, and just started open-sourcing everything he built.</p>
+      <p>Not strategically. Not as a growth hack. He just published stuff because he could. That gave him recognition, jobs, conference speaking opportunities. Sentry itself started as a side project while he worked at Disqus. He built the hosting service over a Christmas break. When the pressure of running Sentry alongside his Dropbox job became unbearable, he went full-time on Sentry in 2015. He was 30 years old, on his sixth job.</p>
+      <p>Here's the thing that really stuck with me: David says the reason Sentry is the kind of company it is comes from a chip on his shoulder. A desire for validation. A need to prove that they can do this entirely on their own. No partnerships, no nothing. Just every customer earned.</p>
+
+      <h2>How to delegate CEO and CTO, and still run the show</h2>
+      <p>I asked David straight up about delegation because I know it's a painful moment for many technical founders. He hired both a CEO and a CTO, roles he held himself. His answer was surprisingly pragmatic.</p>
+      <blockquote><p>"You gotta get to a point where 90% of the decisions they make would be the decisions you would've made. And then you gotta accept that some of them wouldn't be, and that's okay. Most of the time it's neutral. It doesn't matter."</p></blockquote>
+      <p>The key insight: forget the illusion of control through titles. Influence is the better word. David has immense influence at Sentry without holding either title. His job hasn't changed much since stepping out of both roles. He no longer deals with investors or exec hiring, but he's equally involved in strategy and engineering. The benefit isn't fewer responsibilities. It's a larger peer group of smart people making decisions alongside you.</p>
+
+      <h2>Every customer Sentry has ever had came inbound</h2>
+      <p>This one really got me. Every. Single. Customer. Inbound. They've tried outbound, including putting a CTO's name on a billboard near John Deere's headquarters. It hasn't worked yet. Sentry doesn't need it to.</p>
+      <p>The product is the default. Engineers adopt it bottom-up and bring it into their organizations. Disney Plus, banks, major enterprises. They all came through developers who already loved the product. And even at their stage, they're still aggressively focused on YC-stage companies and the top of the funnel. Most companies at Sentry's size would go upmarket. David goes the other direction. That takes real conviction.</p>
+
+      <h2>Stop founding companies at 20. Go learn from other people's mistakes</h2>
+      <p>David's most contrarian advice: 20-year-olds should stop founding companies. Sentry was his sixth job. He worked at gaming companies, Disqus, and Dropbox before starting full-time on Sentry at 30. His reasoning is simple. You haven't seen enough people mess things up yet to know how to avoid it yourself.</p>
+      <blockquote><p>"Join early-stage companies, find interesting problems, work hard, build open source for recognition, and stop asking for permission."</p></blockquote>
+      <p>He also says SF is still an unfair advantage for networking. And don't optimize your career. Just find interesting things to work on. Honestly, as someone who talks to founders constantly on Dev Propulsion Labs, I see the ones who spent years in the trenches before starting their own thing tend to make sharper decisions. Not always, but often enough that David's advice rings true.</p>
+
+      <h2>AI at Sentry: MCP, auto-fixes, and the end of the hype cycle</h2>
+      <p>David built Sentry's MCP server himself. He has the domain expertise to curate exactly what context an AI agent needs. It works, in his words, "unbelievably well." He's been coding exclusively via Claude Code and Cursor for six to nine months. No code written by hand.</p>
+      <p>His take on the current moment: the programming hype cycle is winding down. Models stopped meaningfully improving. The difference between Codex and any Claude model is so insignificant to him he can't even tell. The real excitement, he says, is in image generation and creative tools. Nano Banana Pro. World Labs. Suno for music. That's where the frontier is moving.</p>
+      <p>But for Sentry, AI is very practical. His hypothesis: within a year or two, the easiest 10% of bugs will be auto-fixed with minimal human review. He'd pay $200 per fix for that. The models aren't quite there yet, but the vision is clear. A queue of proposed fixes for trivial bugs, just ready to merge.</p>
+      <p>Victoria Melnikova hosts Dev Propulsion Labs, and if you took one thing from this conversation, it's what David keeps coming back to: it's a game of focus. Find the thing that works, go after it until it stops working, and then find the next thing. Simple to say. Incredibly hard to do.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

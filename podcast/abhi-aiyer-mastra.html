@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Abhi Aiyer taught me about making moves in AI tooling | Victoria Melnikova</title>
+  <meta name="description" content="Abhi Aiyer, co-founder of Mastra, on why TypeScript is overtaking Python for AI agents, how a free book became their biggest growth engine, and why generosity breeds luck.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/abhi-aiyer-mastra.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Abhi Aiyer taught me about making moves in AI tooling">
+  <meta property="og:description" content="Abhi Aiyer, co-founder of Mastra, on why TypeScript is overtaking Python for AI agents, how a free book became their biggest growth engine, and why generosity breeds luck.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/abhi-aiyer-mastra.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/ORARUuQ-I9I/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2025-12-08">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Abhi Aiyer taught me about making moves in AI tooling">
+  <meta name="twitter:description" content="Abhi Aiyer, co-founder of Mastra, on why TypeScript is overtaking Python for AI agents, how a free book became their biggest growth engine, and why generosity breeds luck.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Abhi Aiyer taught me about making moves in AI tooling",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com"},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2025-12-08",
+    "description": "Abhi Aiyer, co-founder of Mastra, on why TypeScript is overtaking Python for AI agents, how a free book became their biggest growth engine, and why generosity breeds luck.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/abhi-aiyer-mastra.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+
+    .author-bio {
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .author-bio-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .author-bio img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      flex-shrink: 0;
+    }
+
+    .author-bio-text {
+      flex: 1;
+    }
+
+    .author-bio-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+
+    .author-bio-name a {
+      color: var(--text-strong);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-underline);
+      transition: border-color 0.2s;
+    }
+
+    .author-bio-name a:hover {
+      border-color: var(--text-muted);
+    }
+
+    .author-bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; December 2025</p>
+    <h1>What Abhi Aiyer taught me about making moves in AI tooling</h1>
+    <p class="article-intro">Victoria Melnikova sat down with Abhi Aiyer on his birthday on Dev Propulsion Labs to talk about how Mastra bet everything on TypeScript for AI agents, turned a free book into a viral growth engine, and raised their seed round exclusively from builders. He's blunt, funny, and has zero patience for "that's cool" feedback. This conversation was a ride.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/ORARUuQ-I9I" title="Abhi Aiyer on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/ORARUuQ-I9I">YouTube</a>
+        <a href="https://evilmartians.com/events/abhi-aiyer-co-founder-of-mastra-typescript-for-ai-agents-and-making-moves">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>When "that's cool" means go away</h2>
+      <p>Before Mastra became Mastra, it was an N8N-style visual agent builder. Abhi and his co-founders showed it to friends and enemies. (He insists you have to ask your enemies too.) Everyone said: "Oh, that's interesting. That's cool."</p>
+      <p>That's not what you want to hear. Abhi was distraught. Because "that's cool" is the polite version of "go away." It's like getting a thumbs-up reaction to your message when someone couldn't be bothered to type three letters.</p>
+      <blockquote><p>"If they just say 'that's cool,' that really just means go away. You want actual feedback. Like they hate it, or look where you're going."</p></blockquote>
+      <p>So he sat with it. Why did they hate it? Nobody gave real feedback, so he had to reverse-engineer it himself. And the answer was clear: every developer they talked to wanted full control of the code. They didn't want drag-and-drop. They wanted TypeScript, full code, full control. Mastra pivoted, and it worked. Victoria Melnikova has seen this pattern across the startups she works with. The lukewarm response is the most dangerous one because it feels like something, but it's nothing.</p>
+
+      <h2>Python was just making HTTP calls the whole time</h2>
+      <p>I asked Abhi straight up: why TypeScript for AI? His answer made me laugh. He looked at what Python developers were actually doing with AI and realized there was no magic. No special ML libraries doing the heavy lifting. Just HTTP calls to OpenAI.</p>
+      <blockquote><p>"I look into all this stuff and it's like, you're making an HTTP call to OpenAI. This doesn't need to be anything special. JavaScript developers already do HTTP calls. And we have better packages for a lot of stuff."</p></blockquote>
+      <p>The Mastra team had been TypeScript builders their entire careers. And as of the week before our conversation, TypeScript became the most popular language on GitHub. The bet is paying off. Abhi's point is that every web developer using React will soon be building agents without even thinking about it. Python's dominance in AI is a historical artifact from the data science era, not a technical necessity for the agent era. Here's the thing: when the underlying technology is just API calls, the framework that fits your existing workflow wins.</p>
+
+      <h2>The book that did what marketing couldn't</h2>
+      <p>Mastra's co-founder Sam wrote a free book on the principles of AI engineering. Let me tell you, this thing went viral. People who don't even use JavaScript are liking the book. Enterprise leads discover it at conferences through guerrilla marketing and enter the funnel from there. Meanwhile, developers find the framework first and use the book as supplementary education.</p>
+      <p>It's a two-sided growth engine. The book brings in enterprise leads from the top. The framework pulls in developers from the bottom. And the second book, Patterns, covers recipes for assembling the building blocks. Once you have all the Lego pieces, you need to figure out how to put them together.</p>
+      <p>I saw the books myself at TED AI in San Francisco. Not a typical developer conference. Stacks of Mastra books just sitting there. That's smart distribution. Education-first marketing is something Victoria Melnikova has been watching closely across the devtools space, and Mastra is one of the best examples I've seen of doing it right. They also run weekly livestreams on Mondays and workshops on Thursdays. It's relentless, and it works.</p>
+
+      <h2>120 builders on the cap table, zero accidents</h2>
+      <p>When the Mastra co-founders sat down to write why they were starting a company, the answers were hilariously honest. Abhi: work with friends and make moves. One co-founder: become the richest guy in South Dakota. (He's not there yet.)</p>
+      <p>They decided every investor should be a builder. If you've never written a line of code, don't talk to them. The result was a coalition round with 120+ builder-investors, including Paul Graham. Their cap table reflects a deliberate choice, not luck.</p>
+      <blockquote><p>"We thought we should raise all of our money from builders. If you didn't write a lick of code in your life, you shouldn't talk to us or give us money or anything."</p></blockquote>
+      <p>I found this fascinating. Most startups take whatever money they can get. Mastra filtered aggressively for cultural fit on the investor side. And when Abhi hires, he does the same thing: building genuine friendships over time, not pitching jobs. His team of 18 includes people he's known for years across multiple companies. He's even hired their brothers. The whole culture is built on pre-existing trust networks, with Abhi as the connector node.</p>
+
+      <h2>Write the docs so you never have to talk about it again</h2>
+      <p>Abhi hates writing documentation. He said it plainly. But he reframed it in a way that stuck with me: every good doc page is one less person who has to talk to you about anything. One less GitHub issue. One less management cycle of being mad about the same thing.</p>
+      <blockquote><p>"Just fix the docs so they never have to talk to you about it. Optimize for not talking to people. That's what I do."</p></blockquote>
+      <p>The Mastra community roasts their docs constantly on Discord. And instead of getting defensive, Abhi takes it as actionable work. Docs and guides are treated as equal priority to bug fixes. When multiple people complain about the same thing, that's a signal to fix it permanently so you never have to discuss it again. Honestly, this is the most pragmatic approach to documentation I've heard from a founder. It's not about making docs because you love writing. It's about making docs because you love not having the same conversation over and over.</p>
+
+      <h2>YC's last slide made him laugh out loud</h2>
+      <p>Abhi went into YC as a skeptic from LA who didn't think San Francisco mattered. His dev tools cohort was all "old people" -- 30+, with kids. They put all the adults together, and that turned out to be a strength: more life experience, less ego, deep friendships that outlasted the program.</p>
+      <p>On the last day of YC, they showed a slide: 99.99% of successful companies are in the Bay Area. Abhi started laughing out loud. People looked at him. He was laughing because it confirmed exactly what he'd come to believe during the batch. They brainwashed him, he said. But not really.</p>
+      <blockquote><p>"I started laughing. I laughed out loud and the people around me looked. I was like, I'm sorry. I just laughed because I was right. They didn't tell us specifically. But that is exactly what you see."</p></blockquote>
+      <p>The principle that ties everything together at Mastra is something Abhi learned from Brad Flora at YC: generosity breeds luck. If you meet anyone from Mastra and ask for help, they'll help. No strings attached. Co-founder Shane personally emails users to check in. When I told Abhi that Shane reached out to us at Evil Martians because we were using Mastra, he just nodded. That's how they operate. The sarcasm is real, but so is the generosity. As someone who talks to dozens of devtools founders every year, Victoria Melnikova finds that in a dev tools ecosystem that can feel transactional, that generosity makes all the difference.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>
