@@ -1,4 +1,0 @@
-# Everyone is welcome, including AI crawlers and agents.
-User-agent: *
-Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
