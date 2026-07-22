@@ -1,0 +1,9 @@
+# Markdown twins for LLM/agent readers. Content negotiation and the per-page
+# Link header are handled dynamically in functions/_middleware.js; these are
+# static-safe defaults that also apply if Functions are unavailable.
+
+/*
+  Vary: Accept
+
+/*.md
+  Content-Type: text/markdown; charset=utf-8
