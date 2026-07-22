@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Amir Rustamzadeh taught me about what VCs really look for in devtools founders | Victoria Melnikova</title>
+  <meta name="description" content="Firestreak Ventures partner Amir Rustamzadeh on going from JPL and SpaceX to venture capital, why founders matter more than products, and why most developer tools never reach venture scale.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/amir-rustamzadeh-firestreak.html">
+  <link rel="alternate" type="text/markdown" href="/podcast/amir-rustamzadeh-firestreak.md">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Amir Rustamzadeh taught me about what VCs really look for in devtools founders">
+  <meta property="og:description" content="Firestreak Ventures partner Amir Rustamzadeh on going from JPL and SpaceX to venture capital, why founders matter more than products, and why most developer tools never reach venture scale.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/amir-rustamzadeh-firestreak.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/1PP7B8FLDH8/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2026-04-14">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Amir Rustamzadeh taught me about what VCs really look for in devtools founders">
+  <meta name="twitter:description" content="Firestreak Ventures partner Amir Rustamzadeh on going from JPL and SpaceX to venture capital, why founders matter more than products, and why most developer tools never reach venture scale.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Amir Rustamzadeh taught me about what VCs really look for in devtools founders",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com", "jobTitle": "Head of New Business", "worksFor": {"@type": "Organization", "name": "Evil Martians"}, "knowsAbout": ["developer tools go-to-market", "devtools GTM strategy", "open source monetization", "product-led growth", "developer experience"]},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2026-04-14",
+    "description": "Firestreak Ventures partner Amir Rustamzadeh on going from JPL and SpaceX to venture capital, why founders matter more than products, and why most developer tools never reach venture scale.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/amir-rustamzadeh-firestreak.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+    .author-bio { margin-top: 48px; padding: 24px; border: 1px solid var(--border); border-radius: 10px; }
+    .author-bio-inner { display: flex; align-items: flex-start; gap: 16px; }
+    .author-bio img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; object-position: center 15%; flex-shrink: 0; }
+    .author-bio-text { flex: 1; }
+    .author-bio-name { font-size: 15px; font-weight: 600; color: var(--text-strong); margin-bottom: 4px; }
+    .author-bio-name a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .author-bio-name a:hover { border-color: var(--text-muted); }
+    .author-bio-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova" target="_blank" rel="noopener">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; April 2026</p>
+    <h1>What Amir Rustamzadeh taught me about what VCs really look for in devtools founders</h1>
+    <p class="article-intro">Amir Rustamzadeh is a partner at Firestreak Ventures, and his path there runs through aerospace, JPL and SpaceX, then startups, then venture capital. He helped shape developer experience as a category during his time at Cypress, so when he talks about what makes a developer tool fundable, it comes from having built the thing, not just written checks for it.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/1PP7B8FLDH8" title="Amir Rustamzadeh on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/1PP7B8FLDH8" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://evilmartians.com/events/amir-rustamzadeh-firestreak" target="_blank" rel="noopener">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" target="_blank" rel="noopener" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" target="_blank" rel="noopener" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>From JPL and SpaceX to venture capital</h2>
+
+      <p>I'm Victoria Melnikova, and I don't get to talk to many investors who started their careers building spacecraft. Amir came up through aerospace, including JPL and SpaceX, before moving into startups and eventually venture capital at Firestreak. That engineering background is why this conversation lands differently from most VC talk. He evaluates founders the way an engineer evaluates a system: looking for the load-bearing parts and the failure modes, not the marketing.</p>
+
+      <h2>Developer experience as a category he helped build</h2>
+
+      <p>Before investing, Amir was at Cypress, where developer experience was being shaped into a real category. That's an important piece of context, because it means he has lived the exact motion his founders are attempting: earning developer trust, turning it into adoption, and then figuring out whether adoption can become a durable business. When he assesses a devtools pitch, he's pattern-matching against work he actually did.</p>
+
+      <h2>Founders before products</h2>
+
+      <p>The through-line of our conversation, and the thing I most wanted to get his read on, is that he backs founders before products. Early-stage products change constantly, so betting on the product as it exists today is a mistake. What he's really underwriting is the founder's ability to learn, adapt, and keep making good calls as the market shifts underneath them. I hear a version of this from most serious early-stage investors, but Amir was unusually concrete about why founder quality is the actual asset.</p>
+
+      <h2>Why most developer tools never reach venture scale</h2>
+
+      <p>The hard truth in this episode is that most developer tools struggle to reach venture scale. Plenty of them are good businesses, but "good business" and "venture-scale outcome" are not the same thing, and conflating them burns founders and investors alike. We talked about the challenge honestly: crowded categories, buyers who are hard to charge, and the gap between developer love and enterprise revenue. If you're raising, it's worth being clear-eyed about which game you're actually playing.</p>
+
+      <h2>Breaking through a crowded market</h2>
+
+      <p>We also dug into how some companies capture attention despite intense competition, using Lovable and Daytona as examples of teams that broke through crowded markets. The lesson I took is that distribution and timing often matter as much as the product itself, and the founders who win are the ones who treat go-to-market as a first-class problem from day one. That's the same message I bring to the startups I work with, so it was good to hear it from the investor's side of the table.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis | Victoria Melnikova</title>
+  <meta name="description" content="RedMonk analyst Kate Holterhoff on AI slop drowning open source maintainers, why code review is the new bottleneck, supply chain threats, and agent experience as a new discovery channel for developer tools.">
+  <meta name="keywords" content="Victoria Melnikova, developer tools, devtools GTM, go-to-market strategy, Dev Propulsion Labs, Evil Martians, open source business, product-led growth, developer experience">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://vmelnikova.com/podcast/kate-holterhoff-redmonk.html">
+  <link rel="alternate" type="text/markdown" href="/podcast/kate-holterhoff-redmonk.md">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis">
+  <meta property="og:description" content="RedMonk analyst Kate Holterhoff on AI slop drowning open source maintainers, why code review is the new bottleneck, supply chain threats, and agent experience as a new discovery channel for developer tools.">
+  <meta property="og:url" content="https://vmelnikova.com/podcast/kate-holterhoff-redmonk.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/BN57gcJLgU8/maxresdefault.jpg">
+  <meta property="article:author" content="Victoria Melnikova">
+  <meta property="article:published_time" content="2026-07-13">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vmelnikova_en">
+  <meta name="twitter:title" content="What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis">
+  <meta name="twitter:description" content="RedMonk analyst Kate Holterhoff on AI slop drowning open source maintainers, why code review is the new bottleneck, supply chain threats, and agent experience as a new discovery channel for developer tools.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis",
+    "author": {"@type": "Person", "name": "Victoria Melnikova", "url": "https://vmelnikova.com", "jobTitle": "Head of New Business", "worksFor": {"@type": "Organization", "name": "Evil Martians"}, "knowsAbout": ["developer tools go-to-market", "devtools GTM strategy", "open source monetization", "product-led growth", "developer experience"]},
+    "publisher": {"@type": "Person", "name": "Victoria Melnikova"},
+    "datePublished": "2026-07-13",
+    "description": "RedMonk analyst Kate Holterhoff on AI slop drowning open source maintainers, why code review is the new bottleneck, supply chain threats, and agent experience as a new discovery channel for developer tools.",
+    "mainEntityOfPage": "https://vmelnikova.com/podcast/kate-holterhoff-redmonk.html"
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5JTQ931LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M5JTQ931LQ');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #111111; --text: #d4d4d8; --text-strong: #fafafa; --text-muted: #a1a1aa; --text-faint: #8b8b94; --text-dim: #7a7a84; --border: #2e2e33; --link-underline: #4a4a52; --toggle-bg: #1e1e22; --toggle-active-bg: #2e2e33; }
+    [data-theme="light"] { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafaf9; --text: #3d3935; --text-strong: #1c1917; --text-muted: #57534e; --text-faint: #6b6560; --text-dim: #8a8580; --border: #e0dedc; --link-underline: #b5b0ab; --toggle-bg: #eeedeb; --toggle-active-bg: #d6d4d1; } }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background 0.3s, color 0.3s; }
+    header { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--text-strong); }
+    .theme-toggle { display: flex; gap: 2px; background: var(--toggle-bg); border-radius: 8px; padding: 3px; }
+    .theme-toggle button { background: none; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-faint); transition: all 0.2s; font-family: inherit; }
+    .theme-toggle button:hover { color: var(--text-strong); }
+    .theme-toggle button.active { background: var(--toggle-active-bg); color: var(--text-strong); }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+    .back-link { font-size: 14px; color: var(--text-faint); text-decoration: none; transition: color 0.2s; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { color: var(--text-strong); }
+    .article-meta { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; color: var(--text-strong); margin-bottom: 16px; line-height: 1.15; }
+    .article-intro { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 48px; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .article-body h2 { font-size: 22px; font-weight: 600; color: var(--text-strong); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .article-body p { font-size: 16px; color: var(--text); margin-bottom: 20px; line-height: 1.8; }
+    .article-body a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: var(--text-muted); }
+    .article-body blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 28px 0; font-style: italic; color: var(--text-muted); }
+    .article-body blockquote p { color: var(--text-muted); }
+    .listen-links { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .listen-links p { font-size: 14px; color: var(--text-faint); margin-bottom: 12px; }
+    .listen-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; margin-right: 20px; }
+    .listen-links a:hover { color: var(--text-strong); border-color: var(--text-muted); }
+    .author-bio { margin-top: 48px; padding: 24px; border: 1px solid var(--border); border-radius: 10px; }
+    .author-bio-inner { display: flex; align-items: flex-start; gap: 16px; }
+    .author-bio img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; object-position: center 15%; flex-shrink: 0; }
+    .author-bio-text { flex: 1; }
+    .author-bio-name { font-size: 15px; font-weight: 600; color: var(--text-strong); margin-bottom: 4px; }
+    .author-bio-name a { color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline); transition: border-color 0.2s; }
+    .author-bio-name a:hover { border-color: var(--text-muted); }
+    .author-bio-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 480px) { h1 { font-size: 28px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } nav { gap: 16px; flex-wrap: wrap; } .content { padding: 48px 20px 80px; } .article-intro { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">About</a>
+      <a href="/podcast/" class="active">Podcast</a>
+      <a href="https://evilmartians.com/martians/victoria-melnikova" target="_blank" rel="noopener">Writing</a>
+    </nav>
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button onclick="setTheme('light')" role="radio" aria-checked="false">Light</button>
+      <button onclick="setTheme('system')" role="radio" aria-checked="true" class="active">System</button>
+      <button onclick="setTheme('dark')" role="radio" aria-checked="false">Dark</button>
+    </div>
+  </header>
+  <div class="content">
+    <a href="/podcast/" class="back-link">&larr; All episodes</a>
+    <p class="article-meta">Dev Propulsion Labs &middot; July 2026</p>
+    <h1>What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis</h1>
+    <p class="article-intro">Kate Holterhoff is a senior analyst at RedMonk, and she took one of the most unusual paths to developer infrastructure research I've come across: mural painting, a literature PhD, a Georgia Tech postdoc, and frontend engineering, all before she started analyzing the tools we build on. That range is exactly why this conversation goes places most industry talk doesn't.</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/BN57gcJLgU8" title="Kate Holterhoff on Dev Propulsion Labs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="listen-links" style="margin-top: 0; margin-bottom: 0; padding-top: 0; border-top: none;">
+      <p>Listen to the full conversation:</p>
+      <a href="https://youtu.be/BN57gcJLgU8" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://evilmartians.com/events/kate-holterhoff-redmonk" target="_blank" rel="noopener">Show notes</a>
+    </div>
+
+    <div class="author-bio" style="margin-top: 24px; margin-bottom: 48px;">
+      <div class="author-bio-inner">
+        <img src="/avatar.webp" alt="Victoria Melnikova">
+        <div class="author-bio-text">
+          <p class="author-bio-name"><a href="/">Victoria Melnikova</a></p>
+          <p class="author-bio-desc">Victoria Melnikova is a business and go-to-market expert for developer tools and AI, and host of Dev Propulsion Labs. She works with 40+ early-stage startups a year as Head of New Business at <a href="https://evilmartians.com" target="_blank" rel="noopener" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Evil Martians</a>. <a href="https://x.com/vmelnikova_en" target="_blank" rel="noopener" style="color: var(--text-strong); text-decoration: none; border-bottom: 1px solid var(--link-underline);">Follow on X</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <h2>An analyst who came up through paint, literature, and frontend code</h2>
+
+      <p>I'm Victoria Melnikova, and I spend most of my time with founders, so sitting down with an analyst was a deliberate change of angle. Kate's route to RedMonk is genuinely uncommon: she painted murals in Cincinnati, studied literature at the doctoral level at Carnegie Mellon, did a postdoc at Georgia Tech, and worked as a frontend engineer before spending the last four years covering developer infrastructure. What I took away is that the best analysis of our industry often comes from people who have lived on both sides of it, technical enough to read the code and humanistic enough to read the culture around it.</p>
+
+      <p>We talked about what analyst work at a firm like RedMonk actually is, and how AI is pushing every research and consulting business to rethink what it sells. When the raw summary of a technology is a prompt away, the value moves to judgment, context, and taste. That's a shift I see hitting devtools companies too, not just the analysts who cover them.</p>
+
+      <h2>The open source crisis: AI slop and the review bottleneck</h2>
+
+      <p>The part of this conversation that stayed with me most was the state of open source. Kate described AI slop drowning maintainers in low-quality pull requests, and the consequence is that code review, not writing code, has become the real bottleneck. When anyone can generate a plausible-looking PR in seconds, the scarce resource is the human attention required to evaluate it.</p>
+
+      <p>She pointed to projects responding by closing themselves off. tldraw and Ladybird have limited external contributions, which would have been almost unthinkable in an earlier era of open source. It's a rational defense against a flood, but it also changes what "open" means in practice. For anyone building on or around open source, this is worth watching closely.</p>
+
+      <h2>Supply chain threats and the cost of wider access</h2>
+
+      <p>We also got into supply chain security, including threats like Mini Shai-Hulud and how they have touched projects such as TanStack. This connects to a broader theme Kate kept returning to: every time you widen access to a tool, whether to less technical users or to automated agents, you take on new security tradeoffs. Access is never free, and the teams that treat security as a first-class part of their developer experience are the ones that earn trust when things go wrong.</p>
+
+      <h2>Agent experience as a new discovery channel</h2>
+
+      <p>Finally, we talked about agent experience as an emerging discovery mechanism for developer tools. If agents are increasingly the ones reading your docs, calling your APIs, and choosing between competing products, then being legible to an agent becomes a real distribution question, not just an engineering nicety. It's a theme I keep hearing across the show, and Kate framed it with an analyst's precision.</p>
+
+      <p>Underneath all of it was RedMonk's community-first ethos, expressed through events like Monktoberfest and Monki Gras. That's a fitting note for this show, because the through-line of Dev Propulsion Labs is that developer tools live and die on trust and community. If you care about where open source, security, and AI are colliding right now, this is a conversation to sit with.</p>
+    </div>
+  </div>
+  <script>
+    function setTheme(theme) {
+      var root = document.documentElement;
+      if (theme === 'light') root.setAttribute('data-theme', 'light');
+      else if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.theme-toggle button').forEach(function(btn) {
+        var isActive = btn.textContent.toLowerCase() === theme;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-checked', isActive);
+      });
+    }
+    var saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+  </script>
+</body>
+</html>
