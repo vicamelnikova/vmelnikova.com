@@ -2,9 +2,9 @@
 
 *Head of New Business at Evil Martians*
 
-Victoria Melnikova brings in new business at [Evil Martians](https://evilmartians.com), the design and engineering firm behind Decagon, bolt.new, Tines and 200+ early-stage startups. Since 2020 she has signed 30+ new clients totaling $2.6M in contracts.
+Victoria Melnikova brings in new business at [Evil Martians](https://evilmartians.com), the design and engineering firm behind Decagon, bolt.new, Tines and hundreds of early-stage startups. Since 2020 she has signed over 30 new clients totaling $2.6M in contracts.
 
-Every year 40+ early-stage startups bring her their go-to-market problems: positioning, developer experience, and finding the first paying customers.
+Every year 40 early-stage startups bring her their go-to-market problems: positioning, developer experience, and finding the first paying customers.
 
 In San Francisco, she hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views and over 40 episodes with founders of Supabase, 37signals, WorkOS, and CodeRabbit. She's spoken at AI Engineer World's Fair in 2025 and 2026 and written for TechCrunch.
 
