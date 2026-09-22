@@ -10,10 +10,6 @@ Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs)
 
 Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
-## Talks
+## Featured
 - [GTM Is You](https://youtu.be/G6IlDzj8OjA) — AI Engineer World's Fair · San Francisco · 2026
-- [All talks and podcast appearances](/talks/index.md)
-
-## Podcast
 - [What Paul Copplestone taught me about scaling Supabase to 5M developers with no meetings](/podcast/paul-copplestone-supabase.md) — Dev Propulsion Labs · November 2025
-- [All episodes](/podcast/index.md)
