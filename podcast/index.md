@@ -1,6 +1,6 @@
 # Dev Propulsion Labs
 
-I interview the people behind developer tools, in person, in San Francisco: David Cramer of Sentry, Paul Copplestone of Supabase, Sam Lambert of PlanetScale, DHH, and 17 others so far. We talk about how they built the product, how they grew it, and how it makes money. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
+I've recorded 45 episodes so far with the people behind developer tools, in person, in San Francisco. David Cramer of Sentry, Paul Copplestone of Supabase, Sam Lambert of PlanetScale, and DHH have all been on the show. We talk about how they built the product, how they grew it, and how it makes money. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
 
 ## Episodes
 
