@@ -8,8 +8,6 @@ Every year she works with 40+ early-stage startups, most of them run by technica
 
 Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. The podcast has over 40 episodes with founders of Supabase, 37signals, WorkOS, CodeRabbit and many more. She still can't quite believe this is her job.
 
-She uses AI to automate her own routine work, with illustration pipelines, self-reported website analytics, and content engines. She writes on the [Martian Chronicles](https://evilmartians.com/chronicles) blog, and in 2023 she wrote for TechCrunch about [how to turn an open source project into a profitable business](https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/).
-
 Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
 ## Writing
