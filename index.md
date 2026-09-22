@@ -6,7 +6,7 @@ Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com
 
 Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first paying customers.
 
-Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. The podcast has over 40 episodes with founders of Supabase, 37signals, WorkOS, CodeRabbit and many more. She still can't quite believe this is her job.
+Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. The podcast has over 40 episodes with founders of Supabase, 37signals, WorkOS, CodeRabbit and many more.
 
 Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
