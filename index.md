@@ -10,7 +10,7 @@ In San Francisco, she hosts [Dev Propulsion Labs](https://evilmartians.com/devpr
 
 Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
-If you have an opportunity to discuss, book a call via [Cal.com](https://cal.com/vica-melnikova/15-min).
+If you have an opportunity to discuss, [book a 15-minute call](https://cal.com/vica-melnikova/15-min).
 
 ## Featured
 - [GTM Is You](https://youtu.be/G6IlDzj8OjA) — AI Engineer World's Fair · San Francisco · 2026
