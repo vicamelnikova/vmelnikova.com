@@ -10,6 +10,8 @@ In San Francisco, she hosts [Dev Propulsion Labs](https://evilmartians.com/devpr
 
 Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
+If you have an opportunity to discuss, book a call via [Cal.com](https://cal.com/vica-melnikova/15-min).
+
 ## Featured
 - [GTM Is You](https://youtu.be/G6IlDzj8OjA) — AI Engineer World's Fair · San Francisco · 2026
 - [What Paul Copplestone taught me about scaling Supabase to 5M developers with no meetings](/podcast/paul-copplestone-supabase.md) — Dev Propulsion Labs · November 2025
