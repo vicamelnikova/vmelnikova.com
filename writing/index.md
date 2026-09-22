@@ -1,7 +1,5 @@
 # Writing
 
-Articles on the [Martian Chronicles](https://evilmartians.com/martians/victoria-melnikova) and TechCrunch.
-
 - [The Golden Switch, or migrating from Gatsby to Astro in under 9¾ days](https://evilmartians.com/chronicles/golden-switch-or-migrating-from-gatsby-to-astro-in-under-9-days) — Martian Chronicles · 2026
 - [AI vs. human illustrators? AI + human illustrators!](https://evilmartians.com/chronicles/ai-vs-human-illustrators-ai-plus-human-illustrators) — Martian Chronicles · 2026
 - [Why devtools startups hire Evil Martians](https://evilmartians.com/chronicles/why-devtools-startups-hire-evil-martians) — Martian Chronicles · 2026
