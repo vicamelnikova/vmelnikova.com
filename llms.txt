@@ -3,7 +3,11 @@
 > Head of New Business at Evil Martians, where she works on go-to-market for developer tools and AI with 40+ early-stage startups a year. Host of Dev Propulsion Labs, a podcast of in-person interviews with the founders behind Sentry, Supabase, PlanetScale, Resend, and other developer tools.
 
 ## About
-- [About Victoria Melnikova](/index.md): Bio, background, writing, talks, and podcast appearances.
+- [About Victoria Melnikova](/index.md): Bio, background, and experience.
+
+## Talks and writing
+- [Talks](/talks/index.md): Conference talks and podcast appearances.
+- [Writing](/writing/index.md): Articles on the Martian Chronicles and TechCrunch.
 
 ## Dev Propulsion Labs (podcast)
 - [All episodes](/podcast/index.md): Full episode list.
