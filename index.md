@@ -2,7 +2,7 @@
 
 *Head of New Business at Evil Martians*
 
-Victoria Melnikova brings in new business at [Evil Martians](https://evilmartians.com), the design and engineering firm behind Decagon, bolt.new, Tines and 200+ early-stage startups.
+Victoria Melnikova brings in new business at [Evil Martians](https://evilmartians.com), the design and engineering firm behind Decagon, bolt.new, Tines and 200+ early-stage startups. Since 2020 she has signed 30+ new clients totalling $2.6M in contracts.
 
 Every year 40+ early-stage startups bring her their go-to-market problems: positioning, developer experience, and finding the first paying customers.
 
