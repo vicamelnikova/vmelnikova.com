@@ -2,7 +2,7 @@
 
 *Head of New Business at Evil Martians. Business & GTM for developer tools and AI*
 
-Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com) and works on go-to-market for developer tools and AI products. She led the company's repositioning: Evil Martians used to be known as a Rails consultancy, and now it's a design and engineering partner for developer tools, AI, and cybersecurity startups.
+Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com) and works on go-to-market for developer tools and AI products. She led repositioning for Evil Martians from a Rails consultancy to a design and engineering partner for developer tools, AI, and cybersecurity startups.
 
 Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first customers who actually pay.
 
