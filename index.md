@@ -1,18 +1,19 @@
 # Victoria Melnikova
 
-*Head of New Business at Evil Martians — Business & GTM for developer tools and AI*
+*Head of New Business at Evil Martians. Business & GTM for developer tools and AI*
 
-Victoria Melnikova is a business and go-to-market expert for developer tools and AI products. She drove [Evil Martians'](https://evilmartians.com) repositioning from a Rails consultancy to a design and engineering partner for developer tools, AI, and cybersecurity startups.
+Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com) and works on go-to-market for developer tools and AI products. She led the company's repositioning: Evil Martians used to be known as a Rails consultancy, and now it's a design and engineering partner for developer tools, AI, and cybersecurity startups.
 
-She works with 40+ early-stage startups a year, helping technical founders figure out positioning, go-to-market, developer experience, and how to get from zero to their first real customers.
+Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first customers who actually pay.
 
-Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools enjoyed by 45K+ listeners. She's sat down face-to-face in San Francisco with 30+ founders including David Cramer (Sentry), David Gomes (Cursor), Paul Copplestone (Supabase), Harjot Gill (CodeRabbit), Zeno Rocha (Resend), Michael Grinich (WorkOS), José Valim (Elixir), and Sam Lambert (PlanetScale). She still can't quite believe this is her job.
+Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 45K+ listeners. She has recorded 30+ in-person interviews in San Francisco with founders like David Cramer (Sentry), David Gomes (Cursor), Paul Copplestone (Supabase), Harjot Gill (CodeRabbit), Zeno Rocha (Resend), Michael Grinich (WorkOS), José Valim (Elixir), and Sam Lambert (PlanetScale). She still can't quite believe this is her job.
 
-Victoria likes to automate routine tasks with AI: illustration pipelines, self-reported website analytics, content engines. She wrote about [how to turn an open source project into a profitable business](https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/) for TechCrunch, and regularly writes on the [Martian Chronicles](https://evilmartians.com/chronicles) blog.
+She uses AI to automate her own routine work, with illustration pipelines, self-reported website analytics, and content engines. She writes on the [Martian Chronicles](https://evilmartians.com/chronicles) blog, and in 2023 she wrote for TechCrunch about [how to turn an open source project into a profitable business](https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/).
 
-Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. Mom, wife, women-in-tech advocate, and a self-described Russian Ipanema girl.
+Victoria went to boarding school for girls in Russia, then studied Economics and Portuguese at Smith College. She's lived in England, Brazil, Portugal, and the US. She's a mom, a wife, a women-in-tech advocate, and a self-described Russian Ipanema girl.
 
 ## Writing
+- [The Golden Switch, or migrating from Gatsby to Astro in under 9¾ days](https://evilmartians.com/chronicles/golden-switch-or-migrating-from-gatsby-to-astro-in-under-9-days) — Martian Chronicles · 2026
 - [AI vs. human illustrators? AI + human illustrators!](https://evilmartians.com/chronicles/ai-vs-human-illustrators-ai-plus-human-illustrators) — Martian Chronicles · 2026
 - [Why devtools startups hire Evil Martians](https://evilmartians.com/chronicles/why-devtools-startups-hire-evil-martians) — Martian Chronicles · 2026
 - [What devtools founders making $100M+ ARR told me in San Francisco](https://evilmartians.com/chronicles/what-devtools-founders-making-100m-arr-told-in-san-francisco) — Martian Chronicles · 2026
@@ -29,6 +30,8 @@ Victoria went to boarding school for girls in Russia, then studied Economics and
 - [Commercializing Open Source](https://youtu.be/5BnXCbVYGKg?si=nPjxm2qc_1UTBlib) — NDC Porto · 2023
 
 ## Podcast Appearances
+- [Good wigs & golden paths: dev tools in the AI era](https://evilmartians.com/events/monkcast-victoria-melnikova) — The MonkCast · 2026
+- [How to run tech startup events in San Francisco](https://evilmartians.com/events/everything-outside-code-victoria-melnikova) — Everything Outside Code · 2026
 - [Commercializing Open Source](https://evilmartians.com/events/net-rocks-commercializing-open-source-with-victoria-melnikova) — .NET Rocks! · 2023
 - [Commercializing Open Source](https://www.heavybit.com/library/podcasts/jamstack-radio/ep-134-commercializing-open-source-with-victoria-melnikova-of-evil-martians) — Jamstack Radio · 2023
 - [How to Make Money at Open Source](https://evilmartians.com/events/how-to-make-money-at-open-source-ruby-rogues) — Ruby Rogues · 2023

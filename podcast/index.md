@@ -1,9 +1,10 @@
 # Dev Propulsion Labs
 
-I interview the founders and builders behind the world's most successful developer tools. Face-to-face conversations in San Francisco about what actually works in building, growing, and monetizing products for developers. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
+I interview the people behind developer tools, in person, in San Francisco: David Cramer of Sentry, Paul Copplestone of Supabase, Sam Lambert of PlanetScale, DHH, and 17 others so far. We talk about how they built the product, how they grew it, and how it makes money. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
 
 ## Episodes
 
+- [What William Imoh taught me about AEO, killing your own traffic, and building a GTM agent](/podcast/william-imoh-hackmamba.md) — August 2026 · Hackmamba. From chemical engineering to developer advocacy to founding Hackmamba. Why AEO is mostly ten years of good SEO, cutting the developer traffic that would never buy, and replacing seven tools with one agent-powered platform.
 - [What Kate Holterhoff taught me about AI slop, agent experience, and the open source crisis](/podcast/kate-holterhoff-redmonk.md) — July 2026 · RedMonk. From mural painting and a literature PhD to analyzing developer infrastructure. Why AI slop is drowning open source maintainers, code review as the real bottleneck, and agent experience as a new discovery channel.
 - [What Matt Biilmann taught me about agent experience as the new developer experience](/podcast/matt-biilmann-netlify.md) — May 2026 · Netlify. From musicology in Copenhagen to coining agent experience (AX). The four pillars of agent-ready products, and why the market for builders jumps from 17 million developers to three billion people.
 - [What Max Prilutskiy taught me about going from a hackathon to YC on cold calls and word of mouth](/podcast/max-prilutskiy-lingodev.md) — April 2026 · Lingo.dev. From coding at nine in Belarus to building Lingo.dev out of a hackathon with zero ideas. How cold exploration calls shaped his whole go-to-market, and why word of mouth is still the only channel that works.
