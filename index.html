@@ -363,6 +363,26 @@
       border: 0;
     }
 
+    .writing-list.collapsed li:nth-child(n+6) {
+      display: none;
+    }
+
+    .show-all {
+      margin-top: 12px;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text-faint);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .show-all:hover {
+      color: var(--text-strong);
+    }
+
     .experience-item {
       display: flex;
       justify-content: space-between;
@@ -628,6 +648,22 @@
 
     var saved = localStorage.getItem('theme');
     if (saved) setTheme(saved);
+
+    document.querySelectorAll('.writing-list').forEach(function(list) {
+      var total = list.children.length;
+      if (total <= 5) return;
+      list.classList.add('collapsed');
+      var btn = document.createElement('button');
+      btn.className = 'show-all';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Show all ' + total;
+      btn.addEventListener('click', function() {
+        var collapsed = list.classList.toggle('collapsed');
+        btn.setAttribute('aria-expanded', String(!collapsed));
+        btn.textContent = collapsed ? 'Show all ' + total : 'Show less';
+      });
+      list.after(btn);
+    });
   </script>
 </body>
 </html>
