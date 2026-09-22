@@ -2,7 +2,7 @@
 
 *Dev Propulsion Labs · March 2026*
 
-Neon's co-founder went from measuring time in attoseconds as a quantum physicist to closing a billion-dollar Databricks deal in 30 days. This conversation was one of the most technically grounded and strategically sharp ones Victoria Melnikova has had on Dev Propulsion Labs.
+Neon's co-founder Stas Kelvich went from measuring time in attoseconds as a quantum physicist to closing a billion-dollar Databricks deal in 30 days. It's one of the most technical conversations I've had on Dev Propulsion Labs, and one of the sharpest on strategy.
 
 - YouTube: https://youtu.be/fTekip2Uyvw
 - Spotify: https://open.spotify.com/episode/1mHXui7GsyDM1mERasjAfc
@@ -11,52 +11,52 @@ Neon's co-founder went from measuring time in attoseconds as a quantum physicist
 
 ## From laser physics to fixing Postgres
 
-Stas trained as a physicist working on strong laser fields and attosecond time measurement. But he was always coding on the side. Ruby on Rails since version one, around 2007. His path into Postgres started the way many great engineering stories do: he had a problem nobody had solved.
+Stas trained as a physicist working on strong laser fields and attosecond time measurement, but he was always coding on the side, including Ruby on Rails since version one, around 2007. His path into Postgres started with a problem nobody had solved.
 
-He needed multi-dimensional indexing for a travel booking engine, found that Postgres couldn't handle it well, looked into why, and fixed it. The Postgres community welcomed the contribution, and he kept going. When I asked why he stuck with databases, his answer was fascinating. Databases have a bigger-than-average institutional memory. Papers from the 1970s are still useful because the fundamentals haven't changed.
+He needed multi-dimensional indexing for a travel booking engine, found that Postgres couldn't handle it well, looked into why, and fixed it. The Postgres community welcomed the contribution, and he kept going. When I asked why he stuck with databases, he said they have a bigger-than-average institutional memory. Papers from the 1970s are still useful because the fundamentals haven't changed.
 
 > "When you contribute to Postgres, you do something small, and people across the world start using it. People write emails from projects you didn't even know existed."
 
-Victoria Melnikova has had several Postgres database founders on Dev Propulsion Labs, and the community is always described the same way: vocal, opinionated, welcoming. Stas embodies that perfectly.
+I've had several Postgres founders on Dev Propulsion Labs, and they all describe the community the same way: vocal, opinionated, and welcoming. Stas fits right in.
 
 ## The bet that made Neon: building the cloud, not just the database
 
 Co-founder Nikita Shamgunov had the idea to separate storage and compute for Postgres. He recruited Stas and Heikki Linnakangas from the Postgres community. But one of the earliest and most consequential decisions was whether to build just the database engine or the full cloud platform. They chose the cloud.
 
-Stas put it bluntly: selling software for other vendors to host is a bad business model. You need to own the stack end to end. That bet meant a larger, more expensive engineering team. Their cloud team was maybe three people while the engine side had 10 to 15. But it created a much stronger differentiator.
+Stas put it bluntly: selling software for other vendors to host is a bad business model, and you need to own the stack end to end. The bet meant a larger, more expensive engineering team. Their cloud team was maybe three people while the engine side had 10 to 15, but owning the cloud gave Neon a much stronger differentiator.
 
-In Victoria Melnikova's experience across the startups she works with, this pattern is clear. The ones who own the full stack have more control over the developer experience, and that's what ultimately drives adoption. The ones who build an engine and hope someone else will host it well are playing a harder game.
+I see the same thing across the startups I work with. The ones that own the full stack control the developer experience, and that's what drives adoption. Building an engine and hoping someone else hosts it well is a harder game.
 
 ## How they solved sharding by not solving it
 
-I asked Stas about Supabase's multi-tenant sharding announcement, expecting a technical deep-dive. Instead, he gave me the most strategic answer possible.
+I asked Stas about Supabase's multi-tenant sharding announcement, expecting a technical deep-dive. I got a strategy answer instead.
 
 > "We solved the sharding problem by not solving it. We concentrated on making one Postgres database work really well."
 
-The previous generation of distributed Postgres-compatible databases, CockroachDB and YugabyteDB, pivoted after struggling to gain momentum. Stas says the majority of the market by revenue is single databases that are fully Postgres-compatible, and that's a bigger opportunity than sharding for a smaller niche. This is a David Cramer-level focus move. Know what you're not going to do, and don't waver.
+The previous generation of distributed Postgres-compatible databases, CockroachDB and YugabyteDB, pivoted after struggling to gain momentum. Stas says the majority of the market by revenue is single databases that are fully Postgres-compatible, and that's a bigger opportunity than sharding for a smaller niche. It's a David Cramer-level focus move: decide what you're not going to do, and stick to it.
 
 ## When agents stress-tested everything overnight
 
-Here's a detail that blew my mind. When Replit launched its Agent product, each database on Neon ended up with around 500 branches, often maxing out tier limits. That's a usage pattern completely different from humans. Neon had to do significant infrastructure work at the metadata and orchestration level to handle it.
+This detail blew my mind: when Replit launched its Agent product, each database on Neon ended up with around 500 branches, often maxing out tier limits. Humans never used Neon that way. Neon had to do significant infrastructure work at the metadata and orchestration level to handle it.
 
-The thing is, they didn't plan for agents. Their product philosophy from day one was to make databases simple for developers who aren't database experts. Two clicks to create a database. GitHub-integrated branching for CI/CD. It turns out that if it's easier to set up for a junior developer, it's easier for agents too. The decisions they made for simplicity accidentally prepared them for the agent wave.
+They didn't plan for agents. From day one, Neon's product philosophy was to make databases usable by developers who aren't database experts, with two clicks to create a database and GitHub-integrated branching for CI/CD. Whatever is quicker for a junior developer to set up turns out to be quicker for agents too, so those decisions prepared Neon for agents by accident.
 
-I talk about this concept a lot. Agent experience is a new service category. The startups who invested in great developer experience early are now reaping the benefits as agents become their biggest power users.
+I talk about agent experience a lot, because I think it's a new service category. Startups that invested in developer experience early are now getting paid back as agents become their biggest power users.
 
 ## Ninety lawyers and blank signature pages
 
-The Neon acquisition by Databricks for $1B closed in about 30 days. For a deal that size, that's almost unheard of. At one point, 90 lawyers were working on it simultaneously. And here's the part that made me laugh. Employees signed papers with blank fields because there wasn't time for custom contracts with proper share numbers.
+Databricks' $1B acquisition of Neon closed in about 30 days, which is almost unheard of for a deal that size. At one point, 90 lawyers were working on it at once. The part that made me laugh: employees signed papers with blank fields because there wasn't time for custom contracts with proper share numbers.
 
 > "A lot of people were worried, but everyone went with it."
 
-Stas says the deal made sense because Neon wanted to move upmarket into enterprise, and doing that alone takes years. You need salespeople, iterations, and you're suddenly operating in a human domain rather than an engineering domain. After an earlier Azure integration moved slowly, they started exploring who could help them compete with the hyperscalers. Databricks was already investing in self-serve and needed a Postgres offering to complement Lakehouse. The fit was natural.
+Stas says the deal made sense because Neon wanted to move upmarket into enterprise, and doing that alone takes years. You need salespeople, iterations, and you're suddenly operating in a human domain rather than an engineering domain. After an earlier Azure integration moved slowly, they started exploring who could help them compete with the hyperscalers. Databricks was already investing in self-serve and needed a Postgres offering to complement Lakehouse, so the two fit.
 
-One year in, the org structure stayed mostly the same. Attrition was minimal. Stas says the biggest positive change is access to strong Databricks engineers and a stronger hiring brand. Challenging the hyperscalers feels more realistic with Databricks' backing than it ever did alone.
+One year in, the org structure has stayed mostly the same and attrition has been minimal. Stas says the biggest positive change is access to strong Databricks engineers and a stronger hiring brand. With Databricks behind them, challenging the hyperscalers looks a lot more realistic than it did when Neon was on its own.
 
-## Stay in the loop. That's the whole playbook
+## Stay in the loop and move fast
 
-Stas experienced what he calls a personal "phase transition" around late 2025 when AI coding tools went from mostly not working on his tasks to mostly working. He can now build pretty big things and run experiments without touching an editor.
+Stas experienced what he calls a personal "phase transition" around late 2025 when AI coding tools stopped mostly failing on his tasks and started mostly working. He can now build pretty big things and run experiments without touching an editor.
 
-His advice for founders is refreshingly simple: stay in the loop, experiment when something feels right, and move fast. You don't need to be the smartest person. You need to be in the right place at the right time. It's a gold rush, and consumption-based business models are on the right side of it.
+His advice for founders: stay in the loop, experiment when something feels right, and move fast. You don't need to be the smartest person, just in the right place at the right time. It's a gold rush, and consumption-based business models are on the right side of it.
 
-That last point resonated with me. As someone who talks to 40+ devtools startups a year on Dev Propulsion Labs and through Evil Martians, Victoria Melnikova sees that the ones with consumption-based models are having a very different 2026 than the ones on per-seat pricing. Agents don't buy seats. They consume infrastructure. If your business model aligns with that, you're in a good position.
+I work with 40+ devtools startups a year, and the ones with consumption-based models are having a very different 2026 from the ones on per-seat pricing. Agents don't buy seats, they consume infrastructure, and a business model that charges for consumption is in a good position.

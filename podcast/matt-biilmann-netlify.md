@@ -2,30 +2,30 @@
 
 *Dev Propulsion Labs · May 2026 · Guest: Matt Biilmann, CEO and co-founder of Netlify · Host: Victoria Melnikova*
 
-Matt Biilmann is the CEO and co-founder of Netlify, and he came to software from an unlikely starting point: musicology in Copenhagen. On this episode he makes the case that developer experience is about to be reframed by a new audience, and he gives that audience a name: agents. AX, he argues, is the next DX.
+Matt Biilmann is the CEO and co-founder of Netlify, and he came to software from musicology in Copenhagen. In this episode he argues that developer experience is getting a new audience, agents, and that AX is the next DX.
 
 - Watch on YouTube: https://youtu.be/UsGvkT8DjBU
 - Show notes: https://evilmartians.com/events/matt-biilmann-netlify
 
 ## From musicology in Copenhagen to running Netlify
 
-I'm Victoria Melnikova, and I always enjoy founders whose origin stories don't run in a straight line. Matt studied musicology in Copenhagen before moving into software, eventually becoming CTO at a company doing web development at high volume, and then co-founding Netlify. That path matters here, because Matt has spent his whole career watching front-end work climb from a niche craft into a mainstream profession. When you've seen one audience expand that dramatically, you're primed to notice the next expansion coming.
+I'm Victoria Melnikova, and I always enjoy founders whose origin stories don't run in a straight line. Matt studied musicology in Copenhagen, moved into software, became CTO at a company doing high-volume web development, and then co-founded Netlify. Along the way he watched frontend work grow from a niche craft into a mainstream profession, so he knows what it looks like when an audience is about to get much bigger.
 
 ## Coining agent experience (AX)
 
-The central idea of this conversation is one Matt has been articulating publicly: agent experience, or AX, as the evolution of developer experience. The premise is simple and, once you hear it, hard to unsee. For years we optimized products for humans writing code. Now a growing share of the "users" reading your docs, calling your APIs, and wiring your product into a workflow are autonomous agents. Designing for them is a discipline of its own.
+Matt has been making this case publicly: agent experience, or AX, is where developer experience goes next. For years we optimized products for humans writing code. Now a growing share of the "users" reading your docs, calling your APIs, and wiring your product into a workflow are autonomous agents, and designing for them is its own discipline.
 
-What I appreciate about the AX framing is that it's not a rebrand of good docs. It's a claim that agents are a distinct audience with distinct needs, and that the products which serve them well will win distribution the same way developer-friendly products did over the last decade.
+The part of AX I find most convincing is the distribution argument. Agents are an audience with their own needs, and Matt thinks the products that serve them well will win distribution the way developer-friendly products did over the last decade.
 
 ## The four pillars of an agent-ready product
 
-Matt breaks agent-usable products into four pillars: access, context, tools, and orchestration. Access is whether an agent can get in at all. Context is whether it can understand what it's looking at. Tools are the concrete actions it can take. Orchestration is how those actions get coordinated into real work. I like this because it turns a fuzzy aspiration ("be good for agents") into a checklist a founder can actually build against.
+Matt breaks an agent-ready product into four pillars. Access is whether an agent can get in at all, and context is whether it understands what it's looking at. Tools are the concrete actions it can take, and orchestration is how those actions add up to real work. I like this because it turns "be good for agents" into a checklist a founder can build against.
 
 ## From 17 million developers to three billion builders
 
-The number that stuck with me: Matt frames the shift as going from roughly 17 million professional JavaScript developers to as many as three billion people who could plausibly build software once agents lower the barrier. Whether or not you take the exact figure literally, the direction is the point. If the addressable population of "people who build things" grows by two orders of magnitude, then the tools, the onboarding, and the go-to-market all have to be rethought for an audience that doesn't look like today's developer.
+Matt frames the shift as going from roughly 17 million professional JavaScript developers to as many as three billion people who could build software once agents lower the barrier. You don't have to take the exact figure literally to see where it's heading. If the population of "people who build things" grows by two orders of magnitude, the tools, the onboarding, and the go-to-market all need rethinking for people who don't look like today's developer.
 
-That's the thread I took from this one. Netlify helped make front-end development mainstream, and Matt is now betting the next expansion is agents building alongside, and on behalf of, a far larger set of people.
+Netlify helped make frontend development mainstream, and now Matt is betting on the next expansion: agents building alongside, and on behalf of, far more people.
 
 ---
 

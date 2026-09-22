@@ -2,61 +2,61 @@
 
 *Dev Propulsion Labs · March 2026*
 
-Anuraag Gutgutia built TrueFoundry from a Meta-inspired ML deployment tool into an enterprise AI gateway now powering Fortune 10 companies. His secret to selling infrastructure when nobody knows you yet? Trust. Not features, not demos, not cold emails. Just trust.
+Anuraag Gutgutia built TrueFoundry from a Meta-inspired ML deployment tool into an enterprise AI gateway that Fortune 10 companies now run on. I asked him how you sell infrastructure when nobody knows you yet, and every answer came back to trust.
 
 - YouTube: https://youtu.be/N72OThsQaE8
 - Show notes: https://evilmartians.com/events/anuraag-gutgutia-truefoundry
 
 ## A hedge fund guy walks into AI infrastructure
 
-I'm Victoria Melnikova, and I talk to a lot of devtools founders. Dozens every year. But Anuraag's story caught me off guard. Here's a guy who managed $600 million in algorithmic trading at WorldQuant. Not exactly the typical path to building an enterprise AI platform. But when his co-founders from IIT Kharagpur, who had been at Meta for years, showed him the gap between Meta's internal ML platform (FB Learner) and what everyone else had access to, the opportunity was impossible to ignore.
+I'm Victoria Melnikova, and I talk to dozens of devtools founders every year, but Anuraag's story still caught me off guard. He used to manage $600 million in algorithmic trading at WorldQuant, which isn't the usual road to an enterprise AI platform. Then his co-founders from IIT Kharagpur, who had been at Meta for years, showed him the gap between Meta's internal ML platform (FB Learner) and what everyone else had access to, and he couldn't ignore it.
 
-Meta was five to seven years ahead of the curve. They had been working on what became Llama long before they released it publicly. TrueFoundry's founding idea was simple: bring that FB Learner capability to every company on the planet. What I loved about this origin story is that the co-founders had known each other for 16 years. They shared a dorm room in college. They were captains of competing teams in inter-hostel competitions. That kind of trust between founders, it turns out, became the central theme of everything Anuraag does.
+Meta was five to seven years ahead of the curve and had been working on what became Llama long before it went public. TrueFoundry's founding idea was to bring that FB Learner capability to every company on the planet. What I loved is how far back the co-founders go: 16 years. They shared a dorm room in college and captained competing teams in inter-hostel competitions. That trust between founders turned out to be the theme of our whole conversation.
 
 ## When your customers rewrite your roadmap
 
-This one really stuck with me. TrueFoundry didn't plan to become an AI gateway company. They started as an ML deployment platform. Then ChatGPT happened, and one of their early enterprise customers, a major US pharma company, asked if they could deploy Llama and other fine-tuned models within their own compute. So TrueFoundry extended the platform.
+TrueFoundry didn't plan to become an AI gateway company. It started as an ML deployment platform. Then ChatGPT happened, and an early enterprise customer, a major US pharma company, asked to deploy Llama and other fine-tuned models on its own compute, so TrueFoundry extended the platform.
 
-Then by late 2023, enterprises realized they wouldn't use just one model. They needed OpenAI plus Bedrock plus Anthropic, all managed with access controls, cost limits, failover, and guardrails. So TrueFoundry built an AI gateway. And here's the thing: because they had built TrueFoundry as a software engineering platform from day zero, not an MLOps tool, agents and MCP servers just worked on it without a massive rearchitecting effort.
+By late 2023, enterprises realized they wouldn't use just one model. They needed OpenAI plus Bedrock plus Anthropic, all managed with access controls, cost limits, failover, and guardrails, so TrueFoundry built an AI gateway. Because the team had built it as a software engineering platform from day zero rather than an MLOps tool, agents and MCP servers later ran on it without a big rearchitecture.
 
 > "It was never an MLOps platform. It was always a platform that took any code you wrote, Dockerized it, and deployed it. So even if you had to deploy agents, it'll just work."
 
-I see this pattern a lot in my work at Evil Martians, where I advise 40+ devtools startups a year. The companies that survive massive market shifts are the ones who made the right architectural bets early, even if they didn't fully know why those bets mattered yet.
+I see this a lot at Evil Martians, where I advise 40+ devtools startups a year. The companies that get through big market shifts usually made the right architectural bets early, sometimes before they knew why those bets would matter.
 
 ## Trust gets you from zero to enterprise
 
-I asked Anuraag straight up: how did you get your first enterprise customers? Did you cold email? Camp out in San Francisco lobbies? His answer was refreshingly honest. He broke trust-building into layers.
+I asked Anuraag straight up how he got his first enterprise customers. Cold email? Camping out in San Francisco lobbies? Instead, he broke trust-building into layers.
 
-First, founder credibility. Your background, your track record. That gets you from zero to maybe 20% trust. Then comes the vision call, where you show the buyer what the future looks like. Enterprise buyers aren't purchasing today's product. They're buying into your ability to evolve it. That takes you to the next level.
+The first layer is founder credibility, meaning your background and track record. That gets you from zero to maybe 20% trust. Next comes the vision call, where you show the buyer what the future looks like, because enterprise buyers are betting on your ability to evolve the product more than on what it does today.
 
-Then there's thought leadership. TrueFoundry ran a podcast called TrueML where they interviewed AI leaders about deployment infrastructure. They wrote deep engineering content on LLM gateways and MCP architecture. They launched TrueFoundry Academy to educate prospects. Anuraag told me they did more than 10 education sessions with a single enterprise, just on MCP servers. None of it was sales. Just enabling.
+Then there's thought leadership. TrueFoundry ran a podcast called TrueML, where they interviewed AI leaders about deployment infrastructure. They also wrote deep engineering content on LLM gateways and MCP architecture and launched TrueFoundry Academy to educate prospects. Anuraag told me they did more than 10 education sessions with a single enterprise, just on MCP servers, and none of them was a sales pitch.
 
 > "The only exchange currency literally is trust. The biggest part of trust in this era would be being able to go on a call and educate a lot of your customers."
 
-As Victoria Melnikova hosting Dev Propulsion Labs, I hear variations of this from almost every successful enterprise founder. But Anuraag's framing as "exchange currency" is the clearest articulation I've encountered. It's not a nice-to-have. It's the actual mechanism of the deal.
+I hear some version of this from almost every enterprise founder on Dev Propulsion Labs, but "exchange currency" is the clearest way anyone has put it to me. In his telling, trust is how the deal actually gets done.
 
 ## Surviving the year before your first big deal
 
-Honestly, this part of the conversation hit close to home. Their first enterprise customer took over a year from incorporation. That's a long time when you're burning cash, raising money, and trying to hire. So how did they survive? They mixed it up. While chasing Fortune 1000 logos, they also landed mid-market customers, companies doing $100M to $200M in revenue, within the first six months.
+Their first enterprise customer took over a year from incorporation. That's a long time to burn cash while raising money and hiring. To get through it, they kept chasing Fortune 1000 logos but also landed mid-market customers, companies doing $100M to $200M in revenue, within the first six months.
 
-And here's something interesting about product-market timing. When TrueFoundry launched the AI gateway product about two years ago, it signed customers much faster than the deployment platform. Why? Because at first, the gateway was experimental. People used it to switch between models, test things out. It wasn't production-critical. The lower stakes shortened the sales cycle. Today that same gateway is the centerpiece of production for their enterprise customers. But the entry point was low-friction.
+Timing mattered too. When TrueFoundry launched the AI gateway about two years ago, it signed customers much faster than the deployment platform had. At first the gateway was experimental: people used it to switch between models and test things out, and nothing in production depended on it. Lower stakes meant a shorter sales cycle. Today that same gateway sits at the center of production for their enterprise customers.
 
 > "One big enterprise is equivalent to like 50 seed companies. So the time is worth it, because if you crack a good enterprise, that can actually be the right design partner that can guide you."
 
-That framing from one of their investors is gold. One good enterprise deal doesn't just bring revenue, it brings the insights that make your product enterprise-grade for everyone else.
+That framing came from one of their investors, and I love it. A good enterprise deal brings revenue, and it also brings the insights that make your product enterprise-grade for everyone else.
 
 ## The two impossible hires (and why voice agents are next)
 
-I always ask founders about hiring because it tells you so much about where the real bottlenecks are. Anuraag named two roles that are nearly impossible to fill. First: product marketers who genuinely understand developers. Not traditional SaaS marketers who can write a blog post, but people who can speak in architectural and infrastructure terms. Who can explain why an MCP gateway matters to a head of platform engineering.
+I always ask founders about hiring, because it shows where the real bottlenecks are. Anuraag named two roles that are nearly impossible to fill. The first is product marketers who understand developers: people who can talk architecture and infrastructure and explain to a head of platform engineering why an MCP gateway matters, rather than traditional SaaS marketers who can write a blog post.
 
-Second: pre-sales engineers. In AI infrastructure, the product changes every few days. You can't just run a static demo. You need someone who is essentially a platform engineer willing to get on customer calls and explain not just what the product does today, but what the roadmap looks like. Both roles sit at the intersection of deep technical knowledge and business communication. Both are critical for growth. Both are a nightmare to scale.
+The second is pre-sales engineers. In AI infrastructure the product changes every few days, so a static demo won't cut it. You need someone who is basically a platform engineer, willing to get on customer calls and walk through what the product does today and where the roadmap is going. Both roles need deep technical knowledge and business communication in one person, and both are a nightmare to scale.
 
-When I asked Anuraag where new founders should look for opportunities, his answer surprised me: voice agents. About a third of the globe communicates primarily through voice, not text. IVR systems, support calls, sales conversations. TrueFoundry is already seeing Fortune 10 companies power their IVR through the platform. They're expanding infrastructure support beyond LLMs to voice agent workloads. It's a massive, underserved niche.
+When I asked where new founders should look for opportunities, his answer surprised me: voice agents. About a third of the globe communicates primarily through voice rather than text, across IVR systems, support calls, and sales conversations. TrueFoundry already has Fortune 10 companies running their IVR through the platform, and it's expanding infrastructure support beyond LLMs to voice agent workloads. To me, that's a big and underserved niche.
 
-## The thread that ties it all together
+## Trust runs through all of it
 
-If I had to pull one thread through this entire conversation, it's that Anuraag applies the same principle everywhere: trust. Customers buy because they trust you. Employees stay because they trust the mission. Co-founders survive hard decisions because they've trusted each other for 16 years. Even TrueFoundry's go-to-market is built on educating, not selling.
+Anuraag applies the same principle everywhere. Customers buy because they trust you, and employees stay because they trust the mission. His co-founders get through hard decisions on 16 years of trust, and even TrueFoundry's go-to-market runs on education rather than selling.
 
 > "Things go wrong all the time, but as long as that trust is built, people will want to work together with you."
 
-I'm Victoria Melnikova, and this conversation reminded me why I started Dev Propulsion Labs in the first place. The best devtools companies aren't just shipping great products. They're building relationships where the product is almost secondary to the trust they've earned. Anuraag and TrueFoundry are a masterclass in that approach. If you're building enterprise AI infrastructure, or anything that requires someone to bet their production stack on you, listen to this one carefully.
+This conversation reminded me why I started Dev Propulsion Labs in the first place. The best devtools companies I know build relationships where the product almost comes second to the trust they've earned, and TrueFoundry is a great example. If you're building enterprise AI infrastructure, or anything where someone has to bet their production stack on you, this one is worth a careful listen.
