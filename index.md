@@ -4,7 +4,7 @@
 
 Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com) and works on go-to-market for developer tools and AI products. She led repositioning for Evil Martians from a Rails consultancy to a design and engineering partner for developer tools, AI, and cybersecurity startups.
 
-Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first customers who actually pay.
+Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first paying customers.
 
 Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. She has recorded 45 episodes in San Francisco with founders like David Cramer (Sentry), David Gomes (Cursor), Paul Copplestone (Supabase), Harjot Gill (CodeRabbit), Zeno Rocha (Resend), Michael Grinich (WorkOS), José Valim (Elixir), and Sam Lambert (PlanetScale). She still can't quite believe this is her job.
 
