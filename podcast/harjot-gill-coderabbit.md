@@ -21,7 +21,7 @@ His analogy is Datadog. Amazon had CloudWatch and GCP had Stackdriver, and Datad
 
 This is one of my favorite go-to-market stories. CodeRabbit skipped design partners, webinars, and the rest of the traditional B2B SaaS playbook. Instead, the product went viral in Japan, of all places.
 
-On zen.dev, end users have written 50+ articles about CodeRabbit, and none of it was orchestrated. Harjot says that organic pull, people discovering and writing about the product without being asked, gave them the confidence to build a real company around it.
+On zenn.dev, end users have written 50+ articles about CodeRabbit, and none of it was orchestrated. Harjot says that organic pull, people discovering and writing about the product without being asked, gave them the confidence to build a real company around it.
 
 > "What we saw was a lot of people pulling the product versus us having to push. We didn't have any design partners, but just the pull in the market was so strong."
 
