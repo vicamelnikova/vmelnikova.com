@@ -1,6 +1,6 @@
 # Dev Propulsion Labs
 
-I've recorded 45 episodes so far with the people behind developer tools, in person, in San Francisco. David Cramer of Sentry, Paul Copplestone of Supabase, Sam Lambert of PlanetScale, and DHH have all been on the show. We talk about how they built the product, how they grew it, and how it makes money. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
+The podcast has over 40 episodes with founders of Supabase, 37signals, WorkOS, CodeRabbit and many more. We talk about how they built the product, how they grew it, and how it makes money. [Watch on YouTube](https://www.youtube.com/playlist?list=PLAgBW0XUpyOUMf8EblYokBiRVOwMnA71H)
 
 ## Episodes
 

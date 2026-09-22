@@ -6,7 +6,7 @@ Victoria Melnikova runs new business at [Evil Martians](https://evilmartians.com
 
 Every year she works with 40+ early-stage startups, most of them run by technical founders. The work is positioning, developer experience, and finding the first paying customers.
 
-Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. She has recorded 45 episodes in San Francisco with founders like David Cramer (Sentry), David Gomes (Cursor), Paul Copplestone (Supabase), Harjot Gill (CodeRabbit), Zeno Rocha (Resend), Michael Grinich (WorkOS), José Valim (Elixir), and Sam Lambert (PlanetScale). She still can't quite believe this is her job.
+Victoria hosts [Dev Propulsion Labs](https://evilmartians.com/devpropulsionlabs), a podcast about the business of developer tools with 100K+ views. The podcast has over 40 episodes with founders of Supabase, 37signals, WorkOS, CodeRabbit and many more. She still can't quite believe this is her job.
 
 She uses AI to automate her own routine work, with illustration pipelines, self-reported website analytics, and content engines. She writes on the [Martian Chronicles](https://evilmartians.com/chronicles) blog, and in 2023 she wrote for TechCrunch about [how to turn an open source project into a profitable business](https://techcrunch.com/2023/03/02/how-to-turn-an-open-source-project-into-a-profitable-business/).
 
